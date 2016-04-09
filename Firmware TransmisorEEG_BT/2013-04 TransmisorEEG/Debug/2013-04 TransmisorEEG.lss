@@ -1,0 +1,2035 @@
+
+2013-04 TransmisorEEG.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000ac6  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00802000  00802000  00000b3a  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          0000006c  00802000  00802000  00000b3a  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000b3a  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000b6c  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000230  00000000  00000000  00000bac  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00002f9c  00000000  00000000  00000ddc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000ba6  00000000  00000000  00003d78  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000cc8  00000000  00000000  0000491e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000550  00000000  00000000  000055e8  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00000c6b  00000000  00000000  00005b38  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000d55  00000000  00000000  000067a3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 000001b0  00000000  00000000  000074f8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 fe 00 	jmp	0x1fc	; 0x1fc <__ctors_end>
+   4:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+   8:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+   c:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  10:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  14:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  18:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  1c:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  20:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  24:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  28:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  2c:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  30:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  34:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  38:	0c 94 00 05 	jmp	0xa00	; 0xa00 <__vector_14>
+  3c:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  40:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  44:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  48:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  4c:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  50:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  54:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  58:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  5c:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  60:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  64:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  68:	0c 94 e7 03 	jmp	0x7ce	; 0x7ce <__vector_26>
+  6c:	0c 94 2a 04 	jmp	0x854	; 0x854 <__vector_27>
+  70:	0c 94 4c 03 	jmp	0x698	; 0x698 <__vector_28>
+  74:	0c 94 0e 03 	jmp	0x61c	; 0x61c <__vector_29>
+  78:	0c 94 eb 02 	jmp	0x5d6	; 0x5d6 <__vector_30>
+  7c:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  80:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  84:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  88:	0c 94 9f 04 	jmp	0x93e	; 0x93e <__vector_34>
+  8c:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  90:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  94:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  98:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  9c:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  a0:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  a4:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  a8:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  ac:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  b0:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  b4:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  b8:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  bc:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  c0:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  c4:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  c8:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  cc:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  d0:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  d4:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  d8:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  dc:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  e0:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  e4:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  e8:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  ec:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  f0:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  f4:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  f8:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+  fc:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 100:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 104:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 108:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 10c:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 110:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 114:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 118:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 11c:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 120:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 124:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 128:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 12c:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 130:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 134:	0c 94 43 05 	jmp	0xa86	; 0xa86 <__vector_77>
+ 138:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 13c:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 140:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 144:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 148:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 14c:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 150:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 154:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 158:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 15c:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 160:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 164:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 168:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 16c:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 170:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 174:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 178:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 17c:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 180:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 184:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 188:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 18c:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 190:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 194:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 198:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 19c:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 1a0:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 1a4:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 1a8:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 1ac:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 1b0:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 1b4:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 1b8:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 1bc:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 1c0:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 1c4:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 1c8:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 1cc:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 1d0:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 1d4:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 1d8:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 1dc:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 1e0:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 1e4:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 1e8:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 1ec:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 1f0:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 1f4:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+ 1f8:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+
+000001fc <__ctors_end>:
+ 1fc:	11 24       	eor	r1, r1
+ 1fe:	1f be       	out	0x3f, r1	; 63
+ 200:	cf ef       	ldi	r28, 0xFF	; 255
+ 202:	cd bf       	out	0x3d, r28	; 61
+ 204:	df e2       	ldi	r29, 0x2F	; 47
+ 206:	de bf       	out	0x3e, r29	; 62
+
+00000208 <__do_clear_bss>:
+ 208:	20 e2       	ldi	r18, 0x20	; 32
+ 20a:	a0 e0       	ldi	r26, 0x00	; 0
+ 20c:	b0 e2       	ldi	r27, 0x20	; 32
+ 20e:	01 c0       	rjmp	.+2      	; 0x212 <.do_clear_bss_start>
+
+00000210 <.do_clear_bss_loop>:
+ 210:	1d 92       	st	X+, r1
+
+00000212 <.do_clear_bss_start>:
+ 212:	ac 36       	cpi	r26, 0x6C	; 108
+ 214:	b2 07       	cpc	r27, r18
+ 216:	e1 f7       	brne	.-8      	; 0x210 <.do_clear_bss_loop>
+ 218:	0e 94 12 01 	call	0x224	; 0x224 <main>
+ 21c:	0c 94 61 05 	jmp	0xac2	; 0xac2 <_exit>
+
+00000220 <__bad_interrupt>:
+ 220:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000224 <main>:
+volatile char TEST_TEST;
+
+
+int main(void)
+{
+	Init32MHz();
+ 224:	0e 94 e8 04 	call	0x9d0	; 0x9d0 <Init32MHz>
+	HabiliteInt(7);
+ 228:	87 e0       	ldi	r24, 0x07	; 7
+ 22a:	0e 94 fa 04 	call	0x9f4	; 0x9f4 <HabiliteInt>
+	sei();
+ 22e:	78 94       	sei
+	
+	PORTB.OUTCLR = (LED_AZUL_bm|LED_VERDE_bm);
+ 230:	83 e0       	ldi	r24, 0x03	; 3
+ 232:	80 93 26 06 	sts	0x0626, r24
+	PORTB.DIRSET = (LED_VERDE_bm|LED_AZUL_bm);
+ 236:	80 93 21 06 	sts	0x0621, r24
+	
+	PW_init(&PW_Ctrl,PW_PDOWN);
+ 23a:	64 e0       	ldi	r22, 0x04	; 4
+ 23c:	8d e2       	ldi	r24, 0x2D	; 45
+ 23e:	90 e2       	ldi	r25, 0x20	; 32
+ 240:	0e 94 87 04 	call	0x90e	; 0x90e <PW_init>
+	
+	PORTB.OUTSET = LED_VERDE_bm;
+ 244:	82 e0       	ldi	r24, 0x02	; 2
+ 246:	80 93 25 06 	sts	0x0625, r24
+	
+	To_tcd0_Init(&to_d0_ctrl);
+ 24a:	87 e0       	ldi	r24, 0x07	; 7
+ 24c:	90 e2       	ldi	r25, 0x20	; 32
+ 24e:	0e 94 5e 05 	call	0xabc	; 0xabc <To_tcd0_Init>
+	To_tcc0_Init(&to_c0_ctrl);
+ 252:	86 e0       	ldi	r24, 0x06	; 6
+ 254:	90 e2       	ldi	r25, 0x20	; 32
+ 256:	0e 94 23 05 	call	0xa46	; 0xa46 <To_tcc0_Init>
+	
+	cola_init(&cola_ctrl1,COLA_MAX,&cola1);
+ 25a:	45 e3       	ldi	r20, 0x35	; 53
+ 25c:	50 e2       	ldi	r21, 0x20	; 32
+ 25e:	6b e1       	ldi	r22, 0x1B	; 27
+ 260:	8f e2       	ldi	r24, 0x2F	; 47
+ 262:	90 e2       	ldi	r25, 0x20	; 32
+ 264:	0e 94 3f 04 	call	0x87e	; 0x87e <cola_init>
+	cola_init(&cola_ctrl2,COLA_MAX,&cola2);
+ 268:	40 e5       	ldi	r20, 0x50	; 80
+ 26a:	50 e2       	ldi	r21, 0x20	; 32
+ 26c:	6b e1       	ldi	r22, 0x1B	; 27
+ 26e:	80 e0       	ldi	r24, 0x00	; 0
+ 270:	90 e2       	ldi	r25, 0x20	; 32
+ 272:	0e 94 3f 04 	call	0x87e	; 0x87e <cola_init>
+	
+	BT_Init(&BT_ctrl); 
+ 276:	81 e2       	ldi	r24, 0x21	; 33
+ 278:	90 e2       	ldi	r25, 0x20	; 32
+ 27a:	0e 94 a9 03 	call	0x752	; 0x752 <BT_Init>
+	ADS_Init(&ADS_Ctrl, ADS_ENERGIA_HIGHRESOLUTION, ADS_DATARATE_HR_1K);
+ 27e:	45 e0       	ldi	r20, 0x05	; 5
+ 280:	60 e8       	ldi	r22, 0x80	; 128
+ 282:	88 e0       	ldi	r24, 0x08	; 8
+ 284:	90 e2       	ldi	r25, 0x20	; 32
+ 286:	0e 94 77 01 	call	0x2ee	; 0x2ee <ADS_Init>
+	
+	ADS_ConfigChannels(&ADS_Ctrl,  ADS_MODO_CONFIG_TEST, ADS_GANANCIA_12);
+ 28a:	40 e6       	ldi	r20, 0x60	; 96
+ 28c:	62 e0       	ldi	r22, 0x02	; 2
+ 28e:	88 e0       	ldi	r24, 0x08	; 8
+ 290:	90 e2       	ldi	r25, 0x20	; 32
+ 292:	0e 94 df 01 	call	0x3be	; 0x3be <ADS_ConfigChannels>
+	
+	while(1)
+	{	
+		
+		ADS_Adquiera(&ADS_Ctrl);
+ 296:	88 e0       	ldi	r24, 0x08	; 8
+ 298:	90 e2       	ldi	r25, 0x20	; 32
+ 29a:	0e 94 9d 02 	call	0x53a	; 0x53a <ADS_Adquiera>
+		BT_Transmitir(&BT_ctrl); //Definicion pines y adapatar a bluetooth
+ 29e:	81 e2       	ldi	r24, 0x21	; 33
+ 2a0:	90 e2       	ldi	r25, 0x20	; 32
+ 2a2:	0e 94 b3 03 	call	0x766	; 0x766 <BT_Transmitir>
+	}
+ 2a6:	f7 cf       	rjmp	.-18     	; 0x296 <main+0x72>
+
+000002a8 <ADS_EnviarByte>:
+	while (!(ADS_Ctrl->banderas & ADS_ARREGLO_ENVIADO_bm));
+}
+
+void ADS_EnviarByte(volatile ADS_Control *ADS_Ctrl, 
+					char comando)
+{
+ 2a8:	fc 01       	movw	r30, r24
+	//Interface serial activa
+	PORTC.OUTCLR = PIN_ADS_CS_bm;
+ 2aa:	80 e1       	ldi	r24, 0x10	; 16
+ 2ac:	80 93 46 06 	sts	0x0646, r24
+	
+	//baje bandera de byte enviado
+	ADS_Ctrl->banderas &= ~(ADS_BYTE_ENVIADO_bm);
+ 2b0:	80 81       	ld	r24, Z
+ 2b2:	8e 7f       	andi	r24, 0xFE	; 254
+ 2b4:	80 83       	st	Z, r24
+	
+	//Modo de transmisión
+	ADS_Ctrl->modo_com = ADS_MODO_COM_ENVIANDO_BYTE;
+ 2b6:	81 e0       	ldi	r24, 0x01	; 1
+ 2b8:	81 83       	std	Z+1, r24	; 0x01
+	
+	//Cargar dato en registro
+	USARTC1.DATA = comando;
+ 2ba:	e0 eb       	ldi	r30, 0xB0	; 176
+ 2bc:	f8 e0       	ldi	r31, 0x08	; 8
+ 2be:	60 83       	st	Z, r22
+	
+	//Habilite interrupciones de txc
+	USARTC1.CTRLA |= (3<<USART_TXCINTLVL_gp);
+ 2c0:	83 81       	ldd	r24, Z+3	; 0x03
+ 2c2:	8c 60       	ori	r24, 0x0C	; 12
+ 2c4:	83 83       	std	Z+3, r24	; 0x03
+ 2c6:	08 95       	ret
+
+000002c8 <ADS_EnviarArreglo>:
+}
+
+void ADS_EnviarArreglo(volatile ADS_Control *ADS_Ctrl,
+						char datos_max )
+{
+ 2c8:	fc 01       	movw	r30, r24
+	//Interface serial activa
+	PORTC.OUTCLR = PIN_ADS_CS_bm;
+ 2ca:	80 e1       	ldi	r24, 0x10	; 16
+ 2cc:	80 93 46 06 	sts	0x0646, r24
+	
+	//Limpie bandera de envío de arreglo
+	ADS_Ctrl->banderas &= ~(ADS_ARREGLO_ENVIADO_bm);
+ 2d0:	80 81       	ld	r24, Z
+ 2d2:	8d 7f       	andi	r24, 0xFD	; 253
+ 2d4:	80 83       	st	Z, r24
+	
+	//Ajuste modo de comunicación
+	ADS_Ctrl->modo_com = ADS_MODO_COM_ENVIANDO_ARREGLO;
+ 2d6:	82 e0       	ldi	r24, 0x02	; 2
+ 2d8:	81 83       	std	Z+1, r24	; 0x01
+	
+	//Fije el número de datos
+	ADS_Ctrl->datos_max = datos_max;
+ 2da:	64 8b       	std	Z+20, r22	; 0x14
+	ADS_Ctrl->n_datos = 0;
+ 2dc:	13 8a       	std	Z+19, r1	; 0x13
+	
+	//envíe el primer dato
+	USARTC1.DATA = ADS_Ctrl->arreglo[0];
+ 2de:	82 81       	ldd	r24, Z+2	; 0x02
+ 2e0:	e0 eb       	ldi	r30, 0xB0	; 176
+ 2e2:	f8 e0       	ldi	r31, 0x08	; 8
+ 2e4:	80 83       	st	Z, r24
+	
+	//Habilite interrupciones de TXC y de DRE
+	USARTC1.CTRLA |= ((3<<USART_TXCINTLVL_gp)|(3<<USART_DREINTLVL_gp));
+ 2e6:	83 81       	ldd	r24, Z+3	; 0x03
+ 2e8:	8f 60       	ori	r24, 0x0F	; 15
+ 2ea:	83 83       	std	Z+3, r24	; 0x03
+ 2ec:	08 95       	ret
+
+000002ee <ADS_Init>:
+volatile extern char TEST_TEST;
+
+void ADS_Init(volatile ADS_Control *ADS_Ctrl,
+		char powermode,
+		char datarate)
+{
+ 2ee:	0f 93       	push	r16
+ 2f0:	1f 93       	push	r17
+ 2f2:	cf 93       	push	r28
+ 2f4:	df 93       	push	r29
+ 2f6:	ec 01       	movw	r28, r24
+ 2f8:	06 2f       	mov	r16, r22
+ 2fa:	14 2f       	mov	r17, r20
+	//Todas la banderas en 0
+	ADS_Ctrl->banderas = 0;
+ 2fc:	18 82       	st	Y, r1
+	
+	//Estado inicial 1
+	ADS_Ctrl->estado = 1;
+ 2fe:	81 e0       	ldi	r24, 0x01	; 1
+ 300:	8f 8b       	std	Y+23, r24	; 0x17
+	
+	//Configuración de los pines
+	//puerto c:
+	PORTC.OUTSET = PIN_ADS_CS_bm;
+ 302:	80 e1       	ldi	r24, 0x10	; 16
+ 304:	80 93 45 06 	sts	0x0645, r24
+	PORTC.OUTCLR = (PIN_ADS_SCK_bm|PIN_ADS_DIN_bm);
+ 308:	90 ea       	ldi	r25, 0xA0	; 160
+ 30a:	90 93 46 06 	sts	0x0646, r25
+	PORTC.DIRSET = (PIN_ADS_CS_bm|PIN_ADS_SCK_bm|PIN_ADS_DIN_bm);
+ 30e:	90 eb       	ldi	r25, 0xB0	; 176
+ 310:	90 93 41 06 	sts	0x0641, r25
+	
+	//CS es activo bajo
+	PORTC.OUTSET = PIN_ADS_CS_bm;
+ 314:	80 93 45 06 	sts	0x0645, r24
+	
+	//puerto D:
+	PORTD.OUTCLR = (PIN_ADS_START_bm|PIN_ADS_PWD_bm|PIN_ADS_RESET_bm);
+ 318:	9c e1       	ldi	r25, 0x1C	; 28
+ 31a:	90 93 66 06 	sts	0x0666, r25
+	PORTD.DIRSET = (PIN_ADS_START_bm|PIN_ADS_PWD_bm|PIN_ADS_RESET_bm);
+ 31e:	90 93 61 06 	sts	0x0661, r25
+	//Control de velocidad de transferencia
+	//BSEL= fPER/(2fBAUD) - 1
+	//1Mbps = 15
+	//2Mbps = 7
+	//16Mbps = 1
+	USARTC1.BAUDCTRLA = 0x07;
+ 322:	97 e0       	ldi	r25, 0x07	; 7
+ 324:	90 93 b6 08 	sts	0x08B6, r25
+	USARTC1.BAUDCTRLB = 0x00;
+ 328:	10 92 b7 08 	sts	0x08B7, r1
+	
+	//Modo Master SPI
+	USARTC1.CTRLC |= 0b11000010;
+ 32c:	90 91 b5 08 	lds	r25, 0x08B5
+ 330:	92 6c       	ori	r25, 0xC2	; 194
+ 332:	90 93 b5 08 	sts	0x08B5, r25
+	
+	//Habilite transmisor
+	USARTC1.CTRLB |= (USART_TXEN_bm);
+ 336:	90 91 b4 08 	lds	r25, 0x08B4
+ 33a:	98 60       	ori	r25, 0x08	; 8
+ 33c:	90 93 b4 08 	sts	0x08B4, r25
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 340:	25 ed       	ldi	r18, 0xD5	; 213
+ 342:	2a 95       	dec	r18
+ 344:	f1 f7       	brne	.-4      	; 0x342 <ADS_Init+0x54>
+ 346:	00 00       	nop
+	//Secuencia de encendido:
+	
+	//esperar 20us para oscilador estabable
+	_delay_us(20);
+	//En alto PWD y RESET
+	PORTD.OUTSET = (PIN_ADS_PWD_bm|PIN_ADS_RESET_bm);
+ 348:	98 e1       	ldi	r25, 0x18	; 24
+ 34a:	90 93 65 06 	sts	0x0665, r25
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 34e:	3f ef       	ldi	r19, 0xFF	; 255
+ 350:	97 ea       	ldi	r25, 0xA7	; 167
+ 352:	21 e6       	ldi	r18, 0x61	; 97
+ 354:	31 50       	subi	r19, 0x01	; 1
+ 356:	90 40       	sbci	r25, 0x00	; 0
+ 358:	20 40       	sbci	r18, 0x00	; 0
+ 35a:	e1 f7       	brne	.-8      	; 0x354 <ADS_Init+0x66>
+ 35c:	00 c0       	rjmp	.+0      	; 0x35e <ADS_Init+0x70>
+ 35e:	00 00       	nop
+	//Esperar 32ms o 1 s
+	_delay_ms(1000);
+	//Pulso de reset
+	PORTD.OUTCLR = PIN_ADS_RESET_bm;
+ 360:	80 93 66 06 	sts	0x0666, r24
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 364:	35 e1       	ldi	r19, 0x15	; 21
+ 366:	3a 95       	dec	r19
+ 368:	f1 f7       	brne	.-4      	; 0x366 <ADS_Init+0x78>
+ 36a:	00 00       	nop
+	//Espere 2us
+	_delay_us(2);
+	//Fin pulso de reset
+	PORTD.OUTSET = PIN_ADS_RESET_bm;
+ 36c:	80 93 65 06 	sts	0x0665, r24
+ 370:	80 e6       	ldi	r24, 0x60	; 96
+ 372:	8a 95       	dec	r24
+ 374:	f1 f7       	brne	.-4      	; 0x372 <ADS_Init+0x84>
+	//Empiece comunicación
+	//Interfaz serial activa:
+	//PORTC.OUTCLR = PIN_ADS_CS_bm;
+	
+	//Detenga conversión Continua
+	ADS_EnviarByte(ADS_Ctrl,ADS_SDATAC);
+ 376:	61 e1       	ldi	r22, 0x11	; 17
+ 378:	ce 01       	movw	r24, r28
+ 37a:	0e 94 54 01 	call	0x2a8	; 0x2a8 <ADS_EnviarByte>
+	while(!(ADS_Ctrl->banderas & ADS_BYTE_ENVIADO_bm));
+ 37e:	88 81       	ld	r24, Y
+ 380:	80 ff       	sbrs	r24, 0
+ 382:	fd cf       	rjmp	.-6      	; 0x37e <ADS_Init+0x90>
+	
+	//Configuración del buffer de referencia - referencia de voltaje interna a 2.4V
+	ADS_Ctrl->arreglo[0] = (ADS_WREG|ADS_REG_CONFIG3);
+ 384:	83 e4       	ldi	r24, 0x43	; 67
+ 386:	8a 83       	std	Y+2, r24	; 0x02
+	ADS_Ctrl->arreglo[1] = 0x00;
+ 388:	1b 82       	std	Y+3, r1	; 0x03
+	ADS_Ctrl->arreglo[2] = 0xc0;
+ 38a:	80 ec       	ldi	r24, 0xC0	; 192
+ 38c:	8c 83       	std	Y+4, r24	; 0x04
+	ADS_EnviarArreglo(ADS_Ctrl,3);
+ 38e:	63 e0       	ldi	r22, 0x03	; 3
+ 390:	ce 01       	movw	r24, r28
+ 392:	0e 94 64 01 	call	0x2c8	; 0x2c8 <ADS_EnviarArreglo>
+	//Espere a que se haya enviado el arreglo
+	while (!(ADS_Ctrl->banderas & ADS_ARREGLO_ENVIADO_bm));
+ 396:	88 81       	ld	r24, Y
+ 398:	81 ff       	sbrs	r24, 1
+ 39a:	fd cf       	rjmp	.-6      	; 0x396 <ADS_Init+0xa8>
+	
+	//Configuración de frecuencia de muestreo y Modo de energía
+	ADS_Ctrl->arreglo[0] = (ADS_WREG|ADS_REG_CONFIG1);
+ 39c:	81 e4       	ldi	r24, 0x41	; 65
+ 39e:	8a 83       	std	Y+2, r24	; 0x02
+	ADS_Ctrl->arreglo[1] = 0x00;
+ 3a0:	1b 82       	std	Y+3, r1	; 0x03
+	ADS_Ctrl->arreglo[2] = (powermode|datarate);
+ 3a2:	10 2b       	or	r17, r16
+ 3a4:	1c 83       	std	Y+4, r17	; 0x04
+	ADS_EnviarArreglo(ADS_Ctrl,3);
+ 3a6:	63 e0       	ldi	r22, 0x03	; 3
+ 3a8:	ce 01       	movw	r24, r28
+ 3aa:	0e 94 64 01 	call	0x2c8	; 0x2c8 <ADS_EnviarArreglo>
+	//Espere a que se haya enviado el arreglo
+	while (!(ADS_Ctrl->banderas & ADS_ARREGLO_ENVIADO_bm));
+ 3ae:	88 81       	ld	r24, Y
+ 3b0:	81 ff       	sbrs	r24, 1
+ 3b2:	fd cf       	rjmp	.-6      	; 0x3ae <ADS_Init+0xc0>
+}
+ 3b4:	df 91       	pop	r29
+ 3b6:	cf 91       	pop	r28
+ 3b8:	1f 91       	pop	r17
+ 3ba:	0f 91       	pop	r16
+ 3bc:	08 95       	ret
+
+000003be <ADS_ConfigChannels>:
+}
+
+void ADS_ConfigChannels(volatile ADS_Control *ADS_Ctrl,
+						char Config_modo,
+						char Granancia)
+{
+ 3be:	1f 93       	push	r17
+ 3c0:	cf 93       	push	r28
+ 3c2:	df 93       	push	r29
+ 3c4:	ec 01       	movw	r28, r24
+ 3c6:	14 2f       	mov	r17, r20
+	switch (Config_modo)
+ 3c8:	62 30       	cpi	r22, 0x02	; 2
+ 3ca:	a1 f1       	breq	.+104    	; 0x434 <ADS_ConfigChannels+0x76>
+ 3cc:	60 f4       	brcc	.+24     	; 0x3e6 <ADS_ConfigChannels+0x28>
+ 3ce:	61 30       	cpi	r22, 0x01	; 1
+ 3d0:	09 f0       	breq	.+2      	; 0x3d4 <ADS_ConfigChannels+0x16>
+ 3d2:	8a c0       	rjmp	.+276    	; 0x4e8 <ADS_ConfigChannels+0x12a>
+	{
+		//Configurar canales en corto
+		case ADS_MODO_CONFIG_CORTO:
+			ADS_Ctrl->arreglo[0] = (ADS_WREG|ADS_REG_CONFIG2);
+ 3d4:	82 e4       	ldi	r24, 0x42	; 66
+ 3d6:	8a 83       	std	Y+2, r24	; 0x02
+			ADS_Ctrl->arreglo[1] = 0x00;
+ 3d8:	1b 82       	std	Y+3, r1	; 0x03
+			ADS_Ctrl->arreglo[2] = 0x00;
+ 3da:	1c 82       	std	Y+4, r1	; 0x04
+			ADS_EnviarArreglo(ADS_Ctrl,3);
+ 3dc:	63 e0       	ldi	r22, 0x03	; 3
+ 3de:	ce 01       	movw	r24, r28
+ 3e0:	0e 94 64 01 	call	0x2c8	; 0x2c8 <ADS_EnviarArreglo>
+			//Espere a que se haya enviado el arreglo
+			while (!(ADS_Ctrl->banderas & ADS_ARREGLO_ENVIADO_bm));
+ 3e4:	0f c0       	rjmp	.+30     	; 0x404 <ADS_ConfigChannels+0x46>
+
+void ADS_ConfigChannels(volatile ADS_Control *ADS_Ctrl,
+						char Config_modo,
+						char Granancia)
+{
+	switch (Config_modo)
+ 3e6:	63 30       	cpi	r22, 0x03	; 3
+ 3e8:	09 f4       	brne	.+2      	; 0x3ec <ADS_ConfigChannels+0x2e>
+ 3ea:	45 c0       	rjmp	.+138    	; 0x476 <ADS_ConfigChannels+0xb8>
+ 3ec:	64 30       	cpi	r22, 0x04	; 4
+ 3ee:	09 f0       	breq	.+2      	; 0x3f2 <ADS_ConfigChannels+0x34>
+ 3f0:	7b c0       	rjmp	.+246    	; 0x4e8 <ADS_ConfigChannels+0x12a>
+			while (!(ADS_Ctrl->banderas & ADS_ARREGLO_ENVIADO_bm));
+		
+		break;
+		
+		case ADS_MODO_CONFIG_OFF:
+			ADS_Ctrl->arreglo[0] = (ADS_WREG|ADS_REG_CONFIG2);
+ 3f2:	82 e4       	ldi	r24, 0x42	; 66
+ 3f4:	8a 83       	std	Y+2, r24	; 0x02
+			ADS_Ctrl->arreglo[1] = 0x00;
+ 3f6:	1b 82       	std	Y+3, r1	; 0x03
+			ADS_Ctrl->arreglo[2] = 0x00;
+ 3f8:	1c 82       	std	Y+4, r1	; 0x04
+			ADS_EnviarArreglo(ADS_Ctrl,3);
+ 3fa:	63 e0       	ldi	r22, 0x03	; 3
+ 3fc:	ce 01       	movw	r24, r28
+ 3fe:	0e 94 64 01 	call	0x2c8	; 0x2c8 <ADS_EnviarArreglo>
+			//Espere a que se haya enviado el arreglo
+			while (!(ADS_Ctrl->banderas & ADS_ARREGLO_ENVIADO_bm));
+ 402:	5b c0       	rjmp	.+182    	; 0x4ba <ADS_ConfigChannels+0xfc>
+			ADS_Ctrl->arreglo[0] = (ADS_WREG|ADS_REG_CONFIG2);
+			ADS_Ctrl->arreglo[1] = 0x00;
+			ADS_Ctrl->arreglo[2] = 0x00;
+			ADS_EnviarArreglo(ADS_Ctrl,3);
+			//Espere a que se haya enviado el arreglo
+			while (!(ADS_Ctrl->banderas & ADS_ARREGLO_ENVIADO_bm));
+ 404:	88 81       	ld	r24, Y
+ 406:	81 ff       	sbrs	r24, 1
+ 408:	fd cf       	rjmp	.-6      	; 0x404 <ADS_ConfigChannels+0x46>
+			
+			ADS_Ctrl->arreglo[0] = (ADS_WREG|ADS_REG_CH1SET);
+ 40a:	85 e4       	ldi	r24, 0x45	; 69
+ 40c:	8a 83       	std	Y+2, r24	; 0x02
+			ADS_Ctrl->arreglo[1] = 0x07;
+ 40e:	87 e0       	ldi	r24, 0x07	; 7
+ 410:	8b 83       	std	Y+3, r24	; 0x03
+			ADS_Ctrl->arreglo[2] = (Granancia|ADS_MUX_CORTO);
+ 412:	11 60       	ori	r17, 0x01	; 1
+ 414:	1c 83       	std	Y+4, r17	; 0x04
+			ADS_Ctrl->arreglo[3] = (Granancia|ADS_MUX_CORTO);
+ 416:	1d 83       	std	Y+5, r17	; 0x05
+			ADS_Ctrl->arreglo[4] = (Granancia|ADS_MUX_CORTO);
+ 418:	1e 83       	std	Y+6, r17	; 0x06
+			ADS_Ctrl->arreglo[5] = (Granancia|ADS_MUX_CORTO);
+ 41a:	1f 83       	std	Y+7, r17	; 0x07
+			ADS_Ctrl->arreglo[6] = (Granancia|ADS_MUX_CORTO);
+ 41c:	18 87       	std	Y+8, r17	; 0x08
+			ADS_Ctrl->arreglo[7] = (Granancia|ADS_MUX_CORTO);
+ 41e:	19 87       	std	Y+9, r17	; 0x09
+			ADS_Ctrl->arreglo[8] = (Granancia|ADS_MUX_CORTO);
+ 420:	1a 87       	std	Y+10, r17	; 0x0a
+			ADS_Ctrl->arreglo[9] = (Granancia|ADS_MUX_CORTO);
+ 422:	1b 87       	std	Y+11, r17	; 0x0b
+			ADS_EnviarArreglo(ADS_Ctrl,10);
+ 424:	6a e0       	ldi	r22, 0x0A	; 10
+ 426:	ce 01       	movw	r24, r28
+ 428:	0e 94 64 01 	call	0x2c8	; 0x2c8 <ADS_EnviarArreglo>
+			//Espere a que se haya enviado el arreglo
+			while (!(ADS_Ctrl->banderas & ADS_ARREGLO_ENVIADO_bm));
+ 42c:	88 81       	ld	r24, Y
+ 42e:	81 ff       	sbrs	r24, 1
+ 430:	fd cf       	rjmp	.-6      	; 0x42c <ADS_ConfigChannels+0x6e>
+ 432:	5a c0       	rjmp	.+180    	; 0x4e8 <ADS_ConfigChannels+0x12a>
+			
+		break;
+		
+		case ADS_MODO_CONFIG_TEST:
+			ADS_Ctrl->arreglo[0] = (ADS_WREG|ADS_REG_CONFIG2);
+ 434:	82 e4       	ldi	r24, 0x42	; 66
+ 436:	8a 83       	std	Y+2, r24	; 0x02
+			ADS_Ctrl->arreglo[1] = 0x00;
+ 438:	1b 82       	std	Y+3, r1	; 0x03
+			ADS_Ctrl->arreglo[2] = 0x10;
+ 43a:	80 e1       	ldi	r24, 0x10	; 16
+ 43c:	8c 83       	std	Y+4, r24	; 0x04
+			ADS_EnviarArreglo(ADS_Ctrl,3);
+ 43e:	63 e0       	ldi	r22, 0x03	; 3
+ 440:	ce 01       	movw	r24, r28
+ 442:	0e 94 64 01 	call	0x2c8	; 0x2c8 <ADS_EnviarArreglo>
+			//Espere a que se haya enviado el arreglo
+			while (!(ADS_Ctrl->banderas & ADS_ARREGLO_ENVIADO_bm));
+ 446:	88 81       	ld	r24, Y
+ 448:	81 ff       	sbrs	r24, 1
+ 44a:	fd cf       	rjmp	.-6      	; 0x446 <ADS_ConfigChannels+0x88>
+			
+			ADS_Ctrl->arreglo[0] = (ADS_WREG|ADS_REG_CH1SET);
+ 44c:	85 e4       	ldi	r24, 0x45	; 69
+ 44e:	8a 83       	std	Y+2, r24	; 0x02
+			ADS_Ctrl->arreglo[1] = 0x07;
+ 450:	87 e0       	ldi	r24, 0x07	; 7
+ 452:	8b 83       	std	Y+3, r24	; 0x03
+			ADS_Ctrl->arreglo[2] = (Granancia|ADS_MUX_TEST);
+ 454:	15 60       	ori	r17, 0x05	; 5
+ 456:	1c 83       	std	Y+4, r17	; 0x04
+			ADS_Ctrl->arreglo[3] = (Granancia|ADS_MUX_TEST);
+ 458:	1d 83       	std	Y+5, r17	; 0x05
+			ADS_Ctrl->arreglo[4] = (Granancia|ADS_MUX_TEST);
+ 45a:	1e 83       	std	Y+6, r17	; 0x06
+			ADS_Ctrl->arreglo[5] = (Granancia|ADS_MUX_TEST);
+ 45c:	1f 83       	std	Y+7, r17	; 0x07
+			ADS_Ctrl->arreglo[6] = (Granancia|ADS_MUX_TEST);
+ 45e:	18 87       	std	Y+8, r17	; 0x08
+			ADS_Ctrl->arreglo[7] = (Granancia|ADS_MUX_TEST);
+ 460:	19 87       	std	Y+9, r17	; 0x09
+			ADS_Ctrl->arreglo[8] = (Granancia|ADS_MUX_TEST);
+ 462:	1a 87       	std	Y+10, r17	; 0x0a
+			ADS_Ctrl->arreglo[9] = (Granancia|ADS_MUX_TEST);
+ 464:	1b 87       	std	Y+11, r17	; 0x0b
+			ADS_EnviarArreglo(ADS_Ctrl,10);
+ 466:	6a e0       	ldi	r22, 0x0A	; 10
+ 468:	ce 01       	movw	r24, r28
+ 46a:	0e 94 64 01 	call	0x2c8	; 0x2c8 <ADS_EnviarArreglo>
+			//Espere a que se haya enviado el arreglo
+			while (!(ADS_Ctrl->banderas & ADS_ARREGLO_ENVIADO_bm));
+ 46e:	88 81       	ld	r24, Y
+ 470:	81 ff       	sbrs	r24, 1
+ 472:	fd cf       	rjmp	.-6      	; 0x46e <ADS_ConfigChannels+0xb0>
+ 474:	39 c0       	rjmp	.+114    	; 0x4e8 <ADS_ConfigChannels+0x12a>
+		break;
+		
+		case ADS_MODO_CONFIG_NORMAL:
+			ADS_Ctrl->arreglo[0] = (ADS_WREG|ADS_REG_CONFIG2);
+ 476:	82 e4       	ldi	r24, 0x42	; 66
+ 478:	8a 83       	std	Y+2, r24	; 0x02
+			ADS_Ctrl->arreglo[1] = 0x00;
+ 47a:	1b 82       	std	Y+3, r1	; 0x03
+			ADS_Ctrl->arreglo[2] = 0x10;
+ 47c:	80 e1       	ldi	r24, 0x10	; 16
+ 47e:	8c 83       	std	Y+4, r24	; 0x04
+			//ADS_Ctrl->arreglo[2] = 0x00;
+			ADS_EnviarArreglo(ADS_Ctrl,3);
+ 480:	63 e0       	ldi	r22, 0x03	; 3
+ 482:	ce 01       	movw	r24, r28
+ 484:	0e 94 64 01 	call	0x2c8	; 0x2c8 <ADS_EnviarArreglo>
+			//Espere a que se haya enviado el arreglo
+			while (!(ADS_Ctrl->banderas & ADS_ARREGLO_ENVIADO_bm));
+ 488:	88 81       	ld	r24, Y
+ 48a:	81 ff       	sbrs	r24, 1
+ 48c:	fd cf       	rjmp	.-6      	; 0x488 <ADS_ConfigChannels+0xca>
+			
+			ADS_Ctrl->arreglo[0] = (ADS_WREG|ADS_REG_CH1SET);
+ 48e:	85 e4       	ldi	r24, 0x45	; 69
+ 490:	8a 83       	std	Y+2, r24	; 0x02
+			ADS_Ctrl->arreglo[1] = 0x07;
+ 492:	87 e0       	ldi	r24, 0x07	; 7
+ 494:	8b 83       	std	Y+3, r24	; 0x03
+			ADS_Ctrl->arreglo[2] = (Granancia|ADS_MUX_TEST);
+ 496:	81 2f       	mov	r24, r17
+ 498:	85 60       	ori	r24, 0x05	; 5
+ 49a:	8c 83       	std	Y+4, r24	; 0x04
+			ADS_Ctrl->arreglo[3] = (Granancia|ADS_MUX_NORMAL);
+ 49c:	1d 83       	std	Y+5, r17	; 0x05
+			ADS_Ctrl->arreglo[4] = (Granancia|ADS_MUX_NORMAL);
+ 49e:	1e 83       	std	Y+6, r17	; 0x06
+			ADS_Ctrl->arreglo[5] = (Granancia|ADS_MUX_NORMAL);
+ 4a0:	1f 83       	std	Y+7, r17	; 0x07
+			ADS_Ctrl->arreglo[6] = (Granancia|ADS_MUX_NORMAL);
+ 4a2:	18 87       	std	Y+8, r17	; 0x08
+			ADS_Ctrl->arreglo[7] = (Granancia|ADS_MUX_NORMAL);
+ 4a4:	19 87       	std	Y+9, r17	; 0x09
+			ADS_Ctrl->arreglo[8] = (Granancia|ADS_MUX_NORMAL);
+ 4a6:	1a 87       	std	Y+10, r17	; 0x0a
+			ADS_Ctrl->arreglo[9] = (Granancia|ADS_MUX_NORMAL);
+ 4a8:	1b 87       	std	Y+11, r17	; 0x0b
+			ADS_EnviarArreglo(ADS_Ctrl,10);
+ 4aa:	6a e0       	ldi	r22, 0x0A	; 10
+ 4ac:	ce 01       	movw	r24, r28
+ 4ae:	0e 94 64 01 	call	0x2c8	; 0x2c8 <ADS_EnviarArreglo>
+			//Espere a que se haya enviado el arreglo
+			while (!(ADS_Ctrl->banderas & ADS_ARREGLO_ENVIADO_bm));
+ 4b2:	88 81       	ld	r24, Y
+ 4b4:	81 ff       	sbrs	r24, 1
+ 4b6:	fd cf       	rjmp	.-6      	; 0x4b2 <ADS_ConfigChannels+0xf4>
+ 4b8:	17 c0       	rjmp	.+46     	; 0x4e8 <ADS_ConfigChannels+0x12a>
+			ADS_Ctrl->arreglo[0] = (ADS_WREG|ADS_REG_CONFIG2);
+			ADS_Ctrl->arreglo[1] = 0x00;
+			ADS_Ctrl->arreglo[2] = 0x00;
+			ADS_EnviarArreglo(ADS_Ctrl,3);
+			//Espere a que se haya enviado el arreglo
+			while (!(ADS_Ctrl->banderas & ADS_ARREGLO_ENVIADO_bm));
+ 4ba:	88 81       	ld	r24, Y
+ 4bc:	81 ff       	sbrs	r24, 1
+ 4be:	fd cf       	rjmp	.-6      	; 0x4ba <ADS_ConfigChannels+0xfc>
+		
+			ADS_Ctrl->arreglo[0] = (ADS_WREG|ADS_REG_CH1SET);
+ 4c0:	85 e4       	ldi	r24, 0x45	; 69
+ 4c2:	8a 83       	std	Y+2, r24	; 0x02
+			ADS_Ctrl->arreglo[1] = 0x07;
+ 4c4:	87 e0       	ldi	r24, 0x07	; 7
+ 4c6:	8b 83       	std	Y+3, r24	; 0x03
+			ADS_Ctrl->arreglo[2] = (Granancia|ADS_CHN_OFF);
+ 4c8:	10 68       	ori	r17, 0x80	; 128
+ 4ca:	1c 83       	std	Y+4, r17	; 0x04
+			ADS_Ctrl->arreglo[3] = (Granancia|ADS_CHN_OFF);
+ 4cc:	1d 83       	std	Y+5, r17	; 0x05
+			ADS_Ctrl->arreglo[4] = (Granancia|ADS_CHN_OFF);
+ 4ce:	1e 83       	std	Y+6, r17	; 0x06
+			ADS_Ctrl->arreglo[5] = (Granancia|ADS_CHN_OFF);
+ 4d0:	1f 83       	std	Y+7, r17	; 0x07
+			ADS_Ctrl->arreglo[6] = (Granancia|ADS_CHN_OFF);
+ 4d2:	18 87       	std	Y+8, r17	; 0x08
+			ADS_Ctrl->arreglo[7] = (Granancia|ADS_CHN_OFF);
+ 4d4:	19 87       	std	Y+9, r17	; 0x09
+			ADS_Ctrl->arreglo[8] = (Granancia|ADS_CHN_OFF);
+ 4d6:	1a 87       	std	Y+10, r17	; 0x0a
+			ADS_Ctrl->arreglo[9] = (Granancia|ADS_CHN_OFF);
+ 4d8:	1b 87       	std	Y+11, r17	; 0x0b
+			ADS_EnviarArreglo(ADS_Ctrl,10);
+ 4da:	6a e0       	ldi	r22, 0x0A	; 10
+ 4dc:	ce 01       	movw	r24, r28
+ 4de:	0e 94 64 01 	call	0x2c8	; 0x2c8 <ADS_EnviarArreglo>
+			//Espere a que se haya enviado el arreglo
+			while (!(ADS_Ctrl->banderas & ADS_ARREGLO_ENVIADO_bm));
+ 4e2:	88 81       	ld	r24, Y
+ 4e4:	81 ff       	sbrs	r24, 1
+ 4e6:	fd cf       	rjmp	.-6      	; 0x4e2 <ADS_ConfigChannels+0x124>
+		break;
+	}
+	
+	
+	//Limpiar banderas de adquisición detenida
+	ADS_Ctrl->banderas &= ~(ADS_ADQUISICION_DETENIDA_bm);
+ 4e8:	88 81       	ld	r24, Y
+ 4ea:	8f 7e       	andi	r24, 0xEF	; 239
+ 4ec:	88 83       	st	Y, r24
+	
+	//Empezar adquisición
+	PORTD.OUTSET = PIN_ADS_START_bm;
+ 4ee:	84 e0       	ldi	r24, 0x04	; 4
+ 4f0:	80 93 65 06 	sts	0x0665, r24
+	
+	ADS_EnviarByte(ADS_Ctrl,ADS_RDATAC);
+ 4f4:	60 e1       	ldi	r22, 0x10	; 16
+ 4f6:	ce 01       	movw	r24, r28
+ 4f8:	0e 94 54 01 	call	0x2a8	; 0x2a8 <ADS_EnviarByte>
+	//Espere a que se haya enviado el comando
+	while (!(ADS_Ctrl->banderas & ADS_BYTE_ENVIADO_bm));
+ 4fc:	88 81       	ld	r24, Y
+ 4fe:	80 ff       	sbrs	r24, 0
+ 500:	fd cf       	rjmp	.-6      	; 0x4fc <ADS_ConfigChannels+0x13e>
+	
+}
+ 502:	df 91       	pop	r29
+ 504:	cf 91       	pop	r28
+ 506:	1f 91       	pop	r17
+ 508:	08 95       	ret
+
+0000050a <ADS_BusqueColaLibre>:
+		
+	}
+}
+
+void ADS_BusqueColaLibre(volatile ADS_Control *ADS_Ctrl)
+{
+ 50a:	cf 93       	push	r28
+ 50c:	df 93       	push	r29
+ 50e:	ec 01       	movw	r28, r24
+	if (cola_vacia(&cola_ctrl1))
+ 510:	8f e2       	ldi	r24, 0x2F	; 47
+ 512:	90 e2       	ldi	r25, 0x20	; 32
+ 514:	0e 94 81 04 	call	0x902	; 0x902 <cola_vacia>
+ 518:	88 23       	and	r24, r24
+ 51a:	11 f0       	breq	.+4      	; 0x520 <ADS_BusqueColaLibre+0x16>
+	{
+		ADS_Ctrl->cola_activa = 1;
+ 51c:	81 e0       	ldi	r24, 0x01	; 1
+ 51e:	07 c0       	rjmp	.+14     	; 0x52e <ADS_BusqueColaLibre+0x24>
+	}
+	else if(cola_vacia(&cola_ctrl2))
+ 520:	80 e0       	ldi	r24, 0x00	; 0
+ 522:	90 e2       	ldi	r25, 0x20	; 32
+ 524:	0e 94 81 04 	call	0x902	; 0x902 <cola_vacia>
+ 528:	88 23       	and	r24, r24
+ 52a:	19 f0       	breq	.+6      	; 0x532 <ADS_BusqueColaLibre+0x28>
+	{
+		ADS_Ctrl->cola_activa = 2;
+ 52c:	82 e0       	ldi	r24, 0x02	; 2
+ 52e:	88 8f       	std	Y+24, r24	; 0x18
+ 530:	01 c0       	rjmp	.+2      	; 0x534 <ADS_BusqueColaLibre+0x2a>
+	}
+	else
+	{
+		ADS_Ctrl->cola_activa = 0;
+ 532:	18 8e       	std	Y+24, r1	; 0x18
+	}
+}
+ 534:	df 91       	pop	r29
+ 536:	cf 91       	pop	r28
+ 538:	08 95       	ret
+
+0000053a <ADS_Adquiera>:
+	while (!(ADS_Ctrl->banderas & ADS_BYTE_ENVIADO_bm));
+	
+}
+
+void ADS_Adquiera(volatile ADS_Control *ADS_Ctrl)
+{
+ 53a:	cf 93       	push	r28
+ 53c:	df 93       	push	r29
+ 53e:	fc 01       	movw	r30, r24
+	if (ADS_Ctrl->banderas & ADS_ADQUISICION_DETENIDA_bm)
+ 540:	80 81       	ld	r24, Z
+ 542:	84 fd       	sbrc	r24, 4
+ 544:	45 c0       	rjmp	.+138    	; 0x5d0 <ADS_Adquiera+0x96>
+		return;
+	
+	switch(ADS_Ctrl->estado)
+ 546:	87 89       	ldd	r24, Z+23	; 0x17
+ 548:	82 30       	cpi	r24, 0x02	; 2
+ 54a:	c9 f0       	breq	.+50     	; 0x57e <ADS_Adquiera+0x44>
+ 54c:	18 f4       	brcc	.+6      	; 0x554 <ADS_Adquiera+0x1a>
+ 54e:	81 30       	cpi	r24, 0x01	; 1
+ 550:	31 f0       	breq	.+12     	; 0x55e <ADS_Adquiera+0x24>
+ 552:	3e c0       	rjmp	.+124    	; 0x5d0 <ADS_Adquiera+0x96>
+ 554:	83 30       	cpi	r24, 0x03	; 3
+ 556:	d1 f0       	breq	.+52     	; 0x58c <ADS_Adquiera+0x52>
+ 558:	84 30       	cpi	r24, 0x04	; 4
+ 55a:	81 f1       	breq	.+96     	; 0x5bc <ADS_Adquiera+0x82>
+ 55c:	39 c0       	rjmp	.+114    	; 0x5d0 <ADS_Adquiera+0x96>
+	{
+		case ADS_ESTADO_ESPEREDRDY:
+			//Verifique que hayan datos listos
+			if(!(PORTD.IN & PIN_ADS_DRDY_bm))
+ 55e:	80 91 68 06 	lds	r24, 0x0668
+ 562:	85 fd       	sbrc	r24, 5
+ 564:	02 c0       	rjmp	.+4      	; 0x56a <ADS_Adquiera+0x30>
+			{
+				//Busque una cola libre para la adquisición
+				ADS_Ctrl->estado = ADS_ESTADO_BUSQUECOLA;	
+ 566:	82 e0       	ldi	r24, 0x02	; 2
+ 568:	32 c0       	rjmp	.+100    	; 0x5ce <ADS_Adquiera+0x94>
+			}
+			else if(ADS_Ctrl->banderas & ADS_DETENGA_ADQUISICION_bm)
+ 56a:	80 81       	ld	r24, Z
+ 56c:	83 ff       	sbrs	r24, 3
+ 56e:	30 c0       	rjmp	.+96     	; 0x5d0 <ADS_Adquiera+0x96>
+			{
+				//Detener la adquisición
+				ADS_Ctrl->banderas |= ADS_ADQUISICION_DETENIDA_bm;
+ 570:	80 81       	ld	r24, Z
+ 572:	80 61       	ori	r24, 0x10	; 16
+ 574:	80 83       	st	Z, r24
+					
+				//Limpiar bandera de solicitud de detención
+				ADS_Ctrl->banderas &= ~(ADS_DETENGA_ADQUISICION_bm);
+ 576:	80 81       	ld	r24, Z
+ 578:	87 7f       	andi	r24, 0xF7	; 247
+ 57a:	80 83       	st	Z, r24
+ 57c:	29 c0       	rjmp	.+82     	; 0x5d0 <ADS_Adquiera+0x96>
+ 57e:	ef 01       	movw	r28, r30
+			}
+		break;
+			
+		case ADS_ESTADO_BUSQUECOLA:
+			ADS_BusqueColaLibre(ADS_Ctrl);
+ 580:	cf 01       	movw	r24, r30
+ 582:	0e 94 85 02 	call	0x50a	; 0x50a <ADS_BusqueColaLibre>
+			//if (ADS_Ctrl->cola_activa)
+			//{
+				ADS_Ctrl->estado = ADS_ESTADO_EMPIECE_ADQUISICION;
+ 586:	83 e0       	ldi	r24, 0x03	; 3
+ 588:	8f 8b       	std	Y+23, r24	; 0x17
+			//}
+		break;
+ 58a:	22 c0       	rjmp	.+68     	; 0x5d0 <ADS_Adquiera+0x96>
+			
+		case ADS_ESTADO_EMPIECE_ADQUISICION:
+			//Active receptor USART
+			USARTC1.CTRLB |= (USART_RXEN_bm);
+ 58c:	90 91 b4 08 	lds	r25, 0x08B4
+ 590:	90 61       	ori	r25, 0x10	; 16
+ 592:	90 93 b4 08 	sts	0x08B4, r25
+				
+			//Inicie interfaz
+			PORTC.OUTCLR = PIN_ADS_CS_bm;
+ 596:	90 e1       	ldi	r25, 0x10	; 16
+ 598:	90 93 46 06 	sts	0x0646, r25
+				
+			//Inicialice contadores de datos
+			ADS_Ctrl->n_datos = 0;
+ 59c:	13 8a       	std	Z+19, r1	; 0x13
+			ADS_Ctrl->n_datos_leidos = 0;
+ 59e:	16 8a       	std	Z+22, r1	; 0x16
+				
+			//Siguiente estado
+			ADS_Ctrl->estado = ADS_ESTADO_ADQUIRIENDO;
+ 5a0:	94 e0       	ldi	r25, 0x04	; 4
+ 5a2:	97 8b       	std	Z+23, r25	; 0x17
+				
+			//Modo recepción de datos
+			ADS_Ctrl->modo_com = ADS_MODO_COM_RECIBIENDO_MUESTRA;
+ 5a4:	81 83       	std	Z+1, r24	; 0x01
+			ADS_Ctrl->banderas &= ~(ADS_MUESTRA_RECIBIDA_bm);
+ 5a6:	80 81       	ld	r24, Z
+ 5a8:	8b 7f       	andi	r24, 0xFB	; 251
+ 5aa:	80 83       	st	Z, r24
+				
+			//Empiece la lectura
+			USARTC1.DATA = 0x00;
+ 5ac:	10 92 b0 08 	sts	0x08B0, r1
+				
+			//Habilite interrupciones de recepción completa y DRE
+			USARTC1.CTRLA |= ((3<<USART_RXCINTLVL_gp)|(3<<USART_DREINTLVL_gp));
+ 5b0:	80 91 b3 08 	lds	r24, 0x08B3
+ 5b4:	83 63       	ori	r24, 0x33	; 51
+ 5b6:	80 93 b3 08 	sts	0x08B3, r24
+			
+		break;
+ 5ba:	0a c0       	rjmp	.+20     	; 0x5d0 <ADS_Adquiera+0x96>
+		
+		case ADS_ESTADO_ADQUIRIENDO:
+			if(ADS_Ctrl->banderas & ADS_MUESTRA_RECIBIDA_bm)
+ 5bc:	80 81       	ld	r24, Z
+ 5be:	82 ff       	sbrs	r24, 2
+ 5c0:	07 c0       	rjmp	.+14     	; 0x5d0 <ADS_Adquiera+0x96>
+			{
+				//Inhabilite el receptor
+				USARTC1.CTRLB &= ~(USART_RXEN_bm);
+ 5c2:	80 91 b4 08 	lds	r24, 0x08B4
+ 5c6:	8f 7e       	andi	r24, 0xEF	; 239
+ 5c8:	80 93 b4 08 	sts	0x08B4, r24
+				
+				//Vuelva al estado inicial
+				ADS_Ctrl->estado = ADS_ESTADO_ESPEREDRDY;
+ 5cc:	81 e0       	ldi	r24, 0x01	; 1
+ 5ce:	87 8b       	std	Z+23, r24	; 0x17
+			}
+		break;
+		
+	}
+}
+ 5d0:	df 91       	pop	r29
+ 5d2:	cf 91       	pop	r28
+ 5d4:	08 95       	ret
+
+000005d6 <__vector_30>:
+	ADS_Ctrl->banderas |= ADS_DETENGA_ADQUISICION_bm;
+}
+
+
+ISR(USARTC1_TXC_vect)
+{
+ 5d6:	1f 92       	push	r1
+ 5d8:	0f 92       	push	r0
+ 5da:	0f b6       	in	r0, 0x3f	; 63
+ 5dc:	0f 92       	push	r0
+ 5de:	11 24       	eor	r1, r1
+ 5e0:	8f 93       	push	r24
+	switch (ADS_Ctrl.modo_com)
+ 5e2:	80 91 09 20 	lds	r24, 0x2009
+ 5e6:	81 30       	cpi	r24, 0x01	; 1
+ 5e8:	31 f0       	breq	.+12     	; 0x5f6 <__vector_30+0x20>
+ 5ea:	82 30       	cpi	r24, 0x02	; 2
+ 5ec:	49 f4       	brne	.+18     	; 0x600 <__vector_30+0x2a>
+			ADS_Ctrl.banderas |= ADS_BYTE_ENVIADO_bm;
+		break;
+		
+		//Enviando arreglo
+		case ADS_MODO_COM_ENVIANDO_ARREGLO:
+			ADS_Ctrl.banderas |= ADS_ARREGLO_ENVIADO_bm;
+ 5ee:	80 91 08 20 	lds	r24, 0x2008
+ 5f2:	82 60       	ori	r24, 0x02	; 2
+ 5f4:	03 c0       	rjmp	.+6      	; 0x5fc <__vector_30+0x26>
+{
+	switch (ADS_Ctrl.modo_com)
+	{
+		//Enviando byte
+		case ADS_MODO_COM_ENVIANDO_BYTE:
+			ADS_Ctrl.banderas |= ADS_BYTE_ENVIADO_bm;
+ 5f6:	80 91 08 20 	lds	r24, 0x2008
+ 5fa:	81 60       	ori	r24, 0x01	; 1
+		break;
+		
+		//Enviando arreglo
+		case ADS_MODO_COM_ENVIANDO_ARREGLO:
+			ADS_Ctrl.banderas |= ADS_ARREGLO_ENVIADO_bm;
+ 5fc:	80 93 08 20 	sts	0x2008, r24
+		break;		
+	}
+	
+	//Apague las interrupciones por transmisión completa
+	USARTC1.CTRLA &= ~(3<<USART_TXCINTLVL_gp);
+ 600:	80 91 b3 08 	lds	r24, 0x08B3
+ 604:	83 7f       	andi	r24, 0xF3	; 243
+ 606:	80 93 b3 08 	sts	0x08B3, r24
+	
+	//Finalice interface de datos
+	PORTC.OUTSET = PIN_ADS_CS_bm;
+ 60a:	80 e1       	ldi	r24, 0x10	; 16
+ 60c:	80 93 45 06 	sts	0x0645, r24
+}
+ 610:	8f 91       	pop	r24
+ 612:	0f 90       	pop	r0
+ 614:	0f be       	out	0x3f, r0	; 63
+ 616:	0f 90       	pop	r0
+ 618:	1f 90       	pop	r1
+ 61a:	18 95       	reti
+
+0000061c <__vector_29>:
+
+ISR(USARTC1_DRE_vect)
+{
+ 61c:	1f 92       	push	r1
+ 61e:	0f 92       	push	r0
+ 620:	0f b6       	in	r0, 0x3f	; 63
+ 622:	0f 92       	push	r0
+ 624:	11 24       	eor	r1, r1
+ 626:	8f 93       	push	r24
+ 628:	9f 93       	push	r25
+ 62a:	ef 93       	push	r30
+ 62c:	ff 93       	push	r31
+	switch(ADS_Ctrl.modo_com)
+ 62e:	80 91 09 20 	lds	r24, 0x2009
+ 632:	82 30       	cpi	r24, 0x02	; 2
+ 634:	19 f0       	breq	.+6      	; 0x63c <__vector_29+0x20>
+ 636:	83 30       	cpi	r24, 0x03	; 3
+ 638:	a9 f0       	breq	.+42     	; 0x664 <__vector_29+0x48>
+ 63a:	25 c0       	rjmp	.+74     	; 0x686 <__vector_29+0x6a>
+	{
+		case ADS_MODO_COM_ENVIANDO_ARREGLO:
+			//Aumente el contador de datos
+			ADS_Ctrl.n_datos++;
+ 63c:	80 91 1b 20 	lds	r24, 0x201B
+ 640:	8f 5f       	subi	r24, 0xFF	; 255
+ 642:	80 93 1b 20 	sts	0x201B, r24
+			
+			//Si no hay más datos, inhabilite la interrupción de DRE
+			if (ADS_Ctrl.n_datos == ADS_Ctrl.datos_max)
+ 646:	90 91 1b 20 	lds	r25, 0x201B
+ 64a:	80 91 1c 20 	lds	r24, 0x201C
+ 64e:	98 17       	cp	r25, r24
+ 650:	91 f0       	breq	.+36     	; 0x676 <__vector_29+0x5a>
+			{
+				USARTC1.CTRLA &= ~(3<<USART_DREINTLVL_gp);
+				break;
+			}
+			
+			USARTC1.DATA = ADS_Ctrl.arreglo[ADS_Ctrl.n_datos];
+ 652:	e0 91 1b 20 	lds	r30, 0x201B
+ 656:	f0 e0       	ldi	r31, 0x00	; 0
+ 658:	e8 5f       	subi	r30, 0xF8	; 248
+ 65a:	ff 4d       	sbci	r31, 0xDF	; 223
+ 65c:	82 81       	ldd	r24, Z+2	; 0x02
+ 65e:	80 93 b0 08 	sts	0x08B0, r24
+		
+		break;
+ 662:	11 c0       	rjmp	.+34     	; 0x686 <__vector_29+0x6a>
+		
+		case ADS_MODO_COM_RECIBIENDO_MUESTRA:
+			ADS_Ctrl.n_datos++;
+ 664:	80 91 1b 20 	lds	r24, 0x201B
+ 668:	8f 5f       	subi	r24, 0xFF	; 255
+ 66a:	80 93 1b 20 	sts	0x201B, r24
+			
+			//Si no hay más datos, inhabilite la interrupción de DRE
+			if (ADS_Ctrl.n_datos == 27)
+ 66e:	80 91 1b 20 	lds	r24, 0x201B
+ 672:	8b 31       	cpi	r24, 0x1B	; 27
+ 674:	31 f4       	brne	.+12     	; 0x682 <__vector_29+0x66>
+			{
+				USARTC1.CTRLA &= ~(3<<USART_DREINTLVL_gp);
+ 676:	80 91 b3 08 	lds	r24, 0x08B3
+ 67a:	8c 7f       	andi	r24, 0xFC	; 252
+ 67c:	80 93 b3 08 	sts	0x08B3, r24
+ 680:	02 c0       	rjmp	.+4      	; 0x686 <__vector_29+0x6a>
+			}
+			else
+			{
+				//Solicite el siguiente dato
+				USARTC1.DATA = 0x00;
+ 682:	10 92 b0 08 	sts	0x08B0, r1
+			}
+		break;
+	}
+}
+ 686:	ff 91       	pop	r31
+ 688:	ef 91       	pop	r30
+ 68a:	9f 91       	pop	r25
+ 68c:	8f 91       	pop	r24
+ 68e:	0f 90       	pop	r0
+ 690:	0f be       	out	0x3f, r0	; 63
+ 692:	0f 90       	pop	r0
+ 694:	1f 90       	pop	r1
+ 696:	18 95       	reti
+
+00000698 <__vector_28>:
+
+ISR(USARTC1_RXC_vect)
+{
+ 698:	1f 92       	push	r1
+ 69a:	0f 92       	push	r0
+ 69c:	0f b6       	in	r0, 0x3f	; 63
+ 69e:	0f 92       	push	r0
+ 6a0:	11 24       	eor	r1, r1
+ 6a2:	2f 93       	push	r18
+ 6a4:	3f 93       	push	r19
+ 6a6:	4f 93       	push	r20
+ 6a8:	5f 93       	push	r21
+ 6aa:	6f 93       	push	r22
+ 6ac:	7f 93       	push	r23
+ 6ae:	8f 93       	push	r24
+ 6b0:	9f 93       	push	r25
+ 6b2:	af 93       	push	r26
+ 6b4:	bf 93       	push	r27
+ 6b6:	ef 93       	push	r30
+ 6b8:	ff 93       	push	r31
+	//Lectura de datos
+	ADS_Ctrl.dato = USARTC1.DATA;
+ 6ba:	80 91 b0 08 	lds	r24, 0x08B0
+ 6be:	80 93 1d 20 	sts	0x201D, r24
+		
+	//Inserción de datos en las colas
+	if(ADS_Ctrl.cola_activa == 1)
+ 6c2:	80 91 20 20 	lds	r24, 0x2020
+	{
+		cola_inserte(&cola_ctrl1,ADS_Ctrl.dato);//cambiar dato por char
+ 6c6:	60 91 1d 20 	lds	r22, 0x201D
+{
+	//Lectura de datos
+	ADS_Ctrl.dato = USARTC1.DATA;
+		
+	//Inserción de datos en las colas
+	if(ADS_Ctrl.cola_activa == 1)
+ 6ca:	81 30       	cpi	r24, 0x01	; 1
+ 6cc:	19 f4       	brne	.+6      	; 0x6d4 <__vector_28+0x3c>
+	{
+		cola_inserte(&cola_ctrl1,ADS_Ctrl.dato);//cambiar dato por char
+ 6ce:	8f e2       	ldi	r24, 0x2F	; 47
+ 6d0:	90 e2       	ldi	r25, 0x20	; 32
+ 6d2:	02 c0       	rjmp	.+4      	; 0x6d8 <__vector_28+0x40>
+	}
+	else
+	{
+		cola_inserte(&cola_ctrl2,ADS_Ctrl.dato);
+ 6d4:	80 e0       	ldi	r24, 0x00	; 0
+ 6d6:	90 e2       	ldi	r25, 0x20	; 32
+ 6d8:	0e 94 47 04 	call	0x88e	; 0x88e <cola_inserte>
+	}
+	
+	//Incremente contador de datos
+	ADS_Ctrl.n_datos_leidos++;
+ 6dc:	80 91 1e 20 	lds	r24, 0x201E
+ 6e0:	8f 5f       	subi	r24, 0xFF	; 255
+ 6e2:	80 93 1e 20 	sts	0x201E, r24
+	
+	if(ADS_Ctrl.n_datos_leidos == 27)
+ 6e6:	80 91 1e 20 	lds	r24, 0x201E
+ 6ea:	8b 31       	cpi	r24, 0x1B	; 27
+ 6ec:	69 f4       	brne	.+26     	; 0x708 <__vector_28+0x70>
+	{
+		//Inhabilite interrupción
+		USARTC1.CTRLA &= ~(3<<USART_RXCINTLVL_gp);
+ 6ee:	80 91 b3 08 	lds	r24, 0x08B3
+ 6f2:	8f 7c       	andi	r24, 0xCF	; 207
+ 6f4:	80 93 b3 08 	sts	0x08B3, r24
+		
+		//Fin de recepción de la muestra
+		ADS_Ctrl.banderas |= ADS_MUESTRA_RECIBIDA_bm;
+ 6f8:	80 91 08 20 	lds	r24, 0x2008
+ 6fc:	84 60       	ori	r24, 0x04	; 4
+ 6fe:	80 93 08 20 	sts	0x2008, r24
+		
+		//Finalice la interfaz
+		PORTC.OUTSET = PIN_ADS_CS_bm;	
+ 702:	80 e1       	ldi	r24, 0x10	; 16
+ 704:	80 93 45 06 	sts	0x0645, r24
+	}
+ 708:	ff 91       	pop	r31
+ 70a:	ef 91       	pop	r30
+ 70c:	bf 91       	pop	r27
+ 70e:	af 91       	pop	r26
+ 710:	9f 91       	pop	r25
+ 712:	8f 91       	pop	r24
+ 714:	7f 91       	pop	r23
+ 716:	6f 91       	pop	r22
+ 718:	5f 91       	pop	r21
+ 71a:	4f 91       	pop	r20
+ 71c:	3f 91       	pop	r19
+ 71e:	2f 91       	pop	r18
+ 720:	0f 90       	pop	r0
+ 722:	0f be       	out	0x3f, r0	; 63
+ 724:	0f 90       	pop	r0
+ 726:	1f 90       	pop	r1
+ 728:	18 95       	reti
+
+0000072a <setupSerial>:
+volatile extern cola_control cola_ctrl1;
+volatile extern cola_control cola_ctrl2;
+
+void setupSerial()
+{	
+	PORTC_DIRSET=PIN3_bm;
+ 72a:	88 e0       	ldi	r24, 0x08	; 8
+ 72c:	80 93 41 06 	sts	0x0641, r24
+	PORTC_DIRCLR=PIN2_bm;
+ 730:	84 e0       	ldi	r24, 0x04	; 4
+ 732:	80 93 42 06 	sts	0x0642, r24
+		
+	USARTC0_BAUDCTRLB = 0b0; //Just to be sure that BSCALE is -4
+ 736:	10 92 a7 08 	sts	0x08A7, r1
+	USARTC0_BAUDCTRLA = 0x03; // 68-->hex 0x44
+ 73a:	83 e0       	ldi	r24, 0x03	; 3
+ 73c:	80 93 a6 08 	sts	0x08A6, r24
+		
+	//Disable interrupts, just for safety
+	USARTC0_CTRLA = 0x29;
+ 740:	99 e2       	ldi	r25, 0x29	; 41
+ 742:	90 93 a3 08 	sts	0x08A3, r25
+		//8 data bits, no parity and 1 stop bit
+	USARTC0_CTRLC = USART_CHSIZE_8BIT_gc;	
+ 746:	80 93 a5 08 	sts	0x08A5, r24
+		//Enable receive and transmit
+	USARTC0_CTRLB = USART_TXEN_bm | USART_RXEN_bm; // And enable high speed mode
+ 74a:	88 e1       	ldi	r24, 0x18	; 24
+ 74c:	80 93 a4 08 	sts	0x08A4, r24
+ 750:	08 95       	ret
+
+00000752 <BT_Init>:
+		sendChar(*text++);
+	}
+}
+
+void BT_Init(volatile BT_Control *BT_ctrl)
+{
+ 752:	cf 93       	push	r28
+ 754:	df 93       	push	r29
+ 756:	ec 01       	movw	r28, r24
+	setupSerial();
+ 758:	0e 94 95 03 	call	0x72a	; 0x72a <setupSerial>
+	BT_ctrl->estado = BT_ESTADO_TX_HAYDATOS;
+ 75c:	81 e0       	ldi	r24, 0x01	; 1
+ 75e:	89 87       	std	Y+9, r24	; 0x09
+	
+}
+ 760:	df 91       	pop	r29
+ 762:	cf 91       	pop	r28
+ 764:	08 95       	ret
+
+00000766 <BT_Transmitir>:
+
+void BT_Transmitir(volatile BT_Control *BT_ctrl)
+{
+ 766:	1f 93       	push	r17
+ 768:	cf 93       	push	r28
+ 76a:	df 93       	push	r29
+ 76c:	ec 01       	movw	r28, r24
+	Enviar datos
+	esperando datos
+	                                                                     */
+	/************************************************************************/
+
+	switch (BT_ctrl->estado)
+ 76e:	19 85       	ldd	r17, Y+9	; 0x09
+ 770:	11 30       	cpi	r17, 0x01	; 1
+ 772:	19 f0       	breq	.+6      	; 0x77a <BT_Transmitir+0x14>
+ 774:	13 30       	cpi	r17, 0x03	; 3
+ 776:	f9 f0       	breq	.+62     	; 0x7b6 <BT_Transmitir+0x50>
+ 778:	26 c0       	rjmp	.+76     	; 0x7c6 <BT_Transmitir+0x60>
+	{
+		case BT_ESTADO_TX_HAYDATOS:
+			
+			if (cola_llena(&cola_ctrl1))
+ 77a:	8f e2       	ldi	r24, 0x2F	; 47
+ 77c:	90 e2       	ldi	r25, 0x20	; 32
+ 77e:	0e 94 7a 04 	call	0x8f4	; 0x8f4 <cola_llena>
+ 782:	81 11       	cpse	r24, r1
+ 784:	06 c0       	rjmp	.+12     	; 0x792 <BT_Transmitir+0x2c>
+			{
+				BT_ctrl->cola_activa = 1;
+				BT_ctrl->banderas |= BT_HAYDATOS_bm;
+			}
+			else if (cola_llena(&cola_ctrl2))
+ 786:	80 e0       	ldi	r24, 0x00	; 0
+ 788:	90 e2       	ldi	r25, 0x20	; 32
+ 78a:	0e 94 7a 04 	call	0x8f4	; 0x8f4 <cola_llena>
+ 78e:	88 23       	and	r24, r24
+ 790:	21 f0       	breq	.+8      	; 0x79a <BT_Transmitir+0x34>
+			{
+				BT_ctrl->cola_activa = 1;
+ 792:	1a 87       	std	Y+10, r17	; 0x0a
+				BT_ctrl->banderas |= BT_HAYDATOS_bm;
+ 794:	88 81       	ld	r24, Y
+ 796:	80 62       	ori	r24, 0x20	; 32
+ 798:	88 83       	st	Y, r24
+			}
+			
+			if (BT_ctrl->banderas & BT_HAYDATOS_bm)
+ 79a:	88 81       	ld	r24, Y
+ 79c:	85 ff       	sbrs	r24, 5
+ 79e:	13 c0       	rjmp	.+38     	; 0x7c6 <BT_Transmitir+0x60>
+			{
+				BT_ctrl->estado = BT_ESTADO_TX_CARGANDOPAYLOAD;
+ 7a0:	83 e0       	ldi	r24, 0x03	; 3
+ 7a2:	89 87       	std	Y+9, r24	; 0x09
+				//Indicar que se empezó la transmisión
+				BT_ctrl->banderas |= BT_TRANSMITIENDO_bm;
+ 7a4:	88 81       	ld	r24, Y
+ 7a6:	80 61       	ori	r24, 0x10	; 16
+ 7a8:	88 83       	st	Y, r24
+				//habilite interrupciones de TXC y de DRE
+				USARTC0.CTRLA |= ((3<<USART_TXCINTLVL_gp)|(3<<USART_DREINTLVL_gp));
+ 7aa:	80 91 a3 08 	lds	r24, 0x08A3
+ 7ae:	8f 60       	ori	r24, 0x0F	; 15
+ 7b0:	80 93 a3 08 	sts	0x08A3, r24
+ 7b4:	08 c0       	rjmp	.+16     	; 0x7c6 <BT_Transmitir+0x60>
+
+		break;
+		
+		case BT_ESTADO_TX_CARGANDOPAYLOAD:
+			
+			if (!(BT_ctrl->banderas & BT_TRANSMITIENDO_bm))
+ 7b6:	88 81       	ld	r24, Y
+ 7b8:	84 fd       	sbrc	r24, 4
+ 7ba:	05 c0       	rjmp	.+10     	; 0x7c6 <BT_Transmitir+0x60>
+			{
+				BT_ctrl->banderas &= (~BT_HAYDATOS_bm);
+ 7bc:	88 81       	ld	r24, Y
+ 7be:	8f 7d       	andi	r24, 0xDF	; 223
+ 7c0:	88 83       	st	Y, r24
+				BT_ctrl->estado = BT_ESTADO_TX_HAYDATOS;			
+ 7c2:	81 e0       	ldi	r24, 0x01	; 1
+ 7c4:	89 87       	std	Y+9, r24	; 0x09
+			}
+		break;	
+	}
+}
+ 7c6:	df 91       	pop	r29
+ 7c8:	cf 91       	pop	r28
+ 7ca:	1f 91       	pop	r17
+ 7cc:	08 95       	ret
+
+000007ce <__vector_26>:
+
+
+ISR(USARTC0_DRE_vect)
+{
+ 7ce:	1f 92       	push	r1
+ 7d0:	0f 92       	push	r0
+ 7d2:	0f b6       	in	r0, 0x3f	; 63
+ 7d4:	0f 92       	push	r0
+ 7d6:	11 24       	eor	r1, r1
+ 7d8:	2f 93       	push	r18
+ 7da:	3f 93       	push	r19
+ 7dc:	4f 93       	push	r20
+ 7de:	5f 93       	push	r21
+ 7e0:	6f 93       	push	r22
+ 7e2:	7f 93       	push	r23
+ 7e4:	8f 93       	push	r24
+ 7e6:	9f 93       	push	r25
+ 7e8:	af 93       	push	r26
+ 7ea:	bf 93       	push	r27
+ 7ec:	ef 93       	push	r30
+ 7ee:	ff 93       	push	r31
+ 7f0:	cf 93       	push	r28
+ 7f2:	df 93       	push	r29
+ 7f4:	1f 92       	push	r1
+ 7f6:	cd b7       	in	r28, 0x3d	; 61
+ 7f8:	de b7       	in	r29, 0x3e	; 62
+	char dato;
+	if (BT_ctrl.cola_activa == 1)
+ 7fa:	80 91 2b 20 	lds	r24, 0x202B
+	{
+		if (cola_retire(&cola_ctrl1,&dato))
+ 7fe:	be 01       	movw	r22, r28
+ 800:	6f 5f       	subi	r22, 0xFF	; 255
+ 802:	7f 4f       	sbci	r23, 0xFF	; 255
+
+
+ISR(USARTC0_DRE_vect)
+{
+	char dato;
+	if (BT_ctrl.cola_activa == 1)
+ 804:	81 30       	cpi	r24, 0x01	; 1
+ 806:	19 f4       	brne	.+6      	; 0x80e <__vector_26+0x40>
+	{
+		if (cola_retire(&cola_ctrl1,&dato))
+ 808:	8f e2       	ldi	r24, 0x2F	; 47
+ 80a:	90 e2       	ldi	r25, 0x20	; 32
+ 80c:	02 c0       	rjmp	.+4      	; 0x812 <__vector_26+0x44>
+			USARTC0.CTRLA &= ~(3<<USART_DREINTLVL_gp);
+		}
+	}
+	else
+	{
+		if (cola_retire(&cola_ctrl2,&dato))
+ 80e:	80 e0       	ldi	r24, 0x00	; 0
+ 810:	90 e2       	ldi	r25, 0x20	; 32
+ 812:	0e 94 61 04 	call	0x8c2	; 0x8c2 <cola_retire>
+ 816:	88 23       	and	r24, r24
+ 818:	21 f0       	breq	.+8      	; 0x822 <__vector_26+0x54>
+		{
+			USARTC0.DATA = dato;
+ 81a:	89 81       	ldd	r24, Y+1	; 0x01
+ 81c:	80 93 a0 08 	sts	0x08A0, r24
+ 820:	05 c0       	rjmp	.+10     	; 0x82c <__vector_26+0x5e>
+			
+		}
+		else
+		{
+			//Apago interrupción
+			USARTC0.CTRLA &= ~(3<<USART_DREINTLVL_gp);
+ 822:	80 91 a3 08 	lds	r24, 0x08A3
+ 826:	8c 7f       	andi	r24, 0xFC	; 252
+ 828:	80 93 a3 08 	sts	0x08A3, r24
+		}
+	}
+}
+ 82c:	0f 90       	pop	r0
+ 82e:	df 91       	pop	r29
+ 830:	cf 91       	pop	r28
+ 832:	ff 91       	pop	r31
+ 834:	ef 91       	pop	r30
+ 836:	bf 91       	pop	r27
+ 838:	af 91       	pop	r26
+ 83a:	9f 91       	pop	r25
+ 83c:	8f 91       	pop	r24
+ 83e:	7f 91       	pop	r23
+ 840:	6f 91       	pop	r22
+ 842:	5f 91       	pop	r21
+ 844:	4f 91       	pop	r20
+ 846:	3f 91       	pop	r19
+ 848:	2f 91       	pop	r18
+ 84a:	0f 90       	pop	r0
+ 84c:	0f be       	out	0x3f, r0	; 63
+ 84e:	0f 90       	pop	r0
+ 850:	1f 90       	pop	r1
+ 852:	18 95       	reti
+
+00000854 <__vector_27>:
+
+ISR(USARTC0_TXC_vect)
+{
+ 854:	1f 92       	push	r1
+ 856:	0f 92       	push	r0
+ 858:	0f b6       	in	r0, 0x3f	; 63
+ 85a:	0f 92       	push	r0
+ 85c:	11 24       	eor	r1, r1
+ 85e:	8f 93       	push	r24
+ 860:	ef 93       	push	r30
+ 862:	ff 93       	push	r31
+	//Indicar que finalizó transmisión de una muestra
+	BT_ctrl.banderas &= ~(BT_TRANSMITIENDO_bm);
+ 864:	e1 e2       	ldi	r30, 0x21	; 33
+ 866:	f0 e2       	ldi	r31, 0x20	; 32
+ 868:	80 81       	ld	r24, Z
+ 86a:	8f 7e       	andi	r24, 0xEF	; 239
+ 86c:	80 83       	st	Z, r24
+ 86e:	ff 91       	pop	r31
+ 870:	ef 91       	pop	r30
+ 872:	8f 91       	pop	r24
+ 874:	0f 90       	pop	r0
+ 876:	0f be       	out	0x3f, r0	; 63
+ 878:	0f 90       	pop	r0
+ 87a:	1f 90       	pop	r1
+ 87c:	18 95       	reti
+
+0000087e <cola_init>:
+#include "cola.h"
+
+void cola_init(volatile cola_control *cola_ctrl, 
+				char max, 
+				char *cola)
+{
+ 87e:	fc 01       	movw	r30, r24
+	cola_ctrl->cont_in = 0;
+ 880:	10 82       	st	Z, r1
+	cola_ctrl->cont_out = 0;
+ 882:	11 82       	std	Z+1, r1	; 0x01
+	cola_ctrl->cont_datos = 0;
+ 884:	12 82       	std	Z+2, r1	; 0x02
+	cola_ctrl->max = max;
+ 886:	63 83       	std	Z+3, r22	; 0x03
+	cola_ctrl->cola = cola;
+ 888:	44 83       	std	Z+4, r20	; 0x04
+ 88a:	55 83       	std	Z+5, r21	; 0x05
+ 88c:	08 95       	ret
+
+0000088e <cola_inserte>:
+}
+
+char cola_inserte(volatile cola_control *cola_ctrl, 
+				char dato)
+{
+ 88e:	fc 01       	movw	r30, r24
+	if (cola_ctrl->cont_datos == cola_ctrl->max)
+ 890:	92 81       	ldd	r25, Z+2	; 0x02
+ 892:	83 81       	ldd	r24, Z+3	; 0x03
+ 894:	98 17       	cp	r25, r24
+ 896:	99 f0       	breq	.+38     	; 0x8be <cola_inserte+0x30>
+		return(0);
+	
+	cola_ctrl->cola[cola_ctrl->cont_in] = dato;
+ 898:	a4 81       	ldd	r26, Z+4	; 0x04
+ 89a:	b5 81       	ldd	r27, Z+5	; 0x05
+ 89c:	80 81       	ld	r24, Z
+ 89e:	a8 0f       	add	r26, r24
+ 8a0:	b1 1d       	adc	r27, r1
+ 8a2:	6c 93       	st	X, r22
+	(cola_ctrl->cont_in)++;
+ 8a4:	80 81       	ld	r24, Z
+ 8a6:	8f 5f       	subi	r24, 0xFF	; 255
+ 8a8:	80 83       	st	Z, r24
+	
+	if (cola_ctrl->cont_in == cola_ctrl->max)
+ 8aa:	90 81       	ld	r25, Z
+ 8ac:	83 81       	ldd	r24, Z+3	; 0x03
+ 8ae:	98 13       	cpse	r25, r24
+ 8b0:	01 c0       	rjmp	.+2      	; 0x8b4 <cola_inserte+0x26>
+		cola_ctrl->cont_in = 0;
+ 8b2:	10 82       	st	Z, r1
+		
+	(cola_ctrl->cont_datos)++;
+ 8b4:	82 81       	ldd	r24, Z+2	; 0x02
+ 8b6:	8f 5f       	subi	r24, 0xFF	; 255
+ 8b8:	82 83       	std	Z+2, r24	; 0x02
+	return(1);
+ 8ba:	81 e0       	ldi	r24, 0x01	; 1
+ 8bc:	08 95       	ret
+
+char cola_inserte(volatile cola_control *cola_ctrl, 
+				char dato)
+{
+	if (cola_ctrl->cont_datos == cola_ctrl->max)
+		return(0);
+ 8be:	80 e0       	ldi	r24, 0x00	; 0
+	if (cola_ctrl->cont_in == cola_ctrl->max)
+		cola_ctrl->cont_in = 0;
+		
+	(cola_ctrl->cont_datos)++;
+	return(1);
+}
+ 8c0:	08 95       	ret
+
+000008c2 <cola_retire>:
+
+char cola_retire(volatile cola_control *cola_ctrl, 
+				char *dato)
+{
+ 8c2:	fc 01       	movw	r30, r24
+	if(!(cola_ctrl->cont_datos))
+ 8c4:	82 81       	ldd	r24, Z+2	; 0x02
+ 8c6:	88 23       	and	r24, r24
+ 8c8:	a1 f0       	breq	.+40     	; 0x8f2 <cola_retire+0x30>
+		return (0);
+		
+	*dato = cola_ctrl->cola[cola_ctrl->cont_out];
+ 8ca:	a4 81       	ldd	r26, Z+4	; 0x04
+ 8cc:	b5 81       	ldd	r27, Z+5	; 0x05
+ 8ce:	81 81       	ldd	r24, Z+1	; 0x01
+ 8d0:	a8 0f       	add	r26, r24
+ 8d2:	b1 1d       	adc	r27, r1
+ 8d4:	8c 91       	ld	r24, X
+ 8d6:	db 01       	movw	r26, r22
+ 8d8:	8c 93       	st	X, r24
+	(cola_ctrl->cont_out)++;
+ 8da:	81 81       	ldd	r24, Z+1	; 0x01
+ 8dc:	8f 5f       	subi	r24, 0xFF	; 255
+ 8de:	81 83       	std	Z+1, r24	; 0x01
+	
+	if(cola_ctrl->cont_out == cola_ctrl->max)
+ 8e0:	91 81       	ldd	r25, Z+1	; 0x01
+ 8e2:	83 81       	ldd	r24, Z+3	; 0x03
+ 8e4:	98 13       	cpse	r25, r24
+ 8e6:	01 c0       	rjmp	.+2      	; 0x8ea <cola_retire+0x28>
+		cola_ctrl->cont_out = 0;
+ 8e8:	11 82       	std	Z+1, r1	; 0x01
+	
+	(cola_ctrl->cont_datos)--;
+ 8ea:	82 81       	ldd	r24, Z+2	; 0x02
+ 8ec:	81 50       	subi	r24, 0x01	; 1
+ 8ee:	82 83       	std	Z+2, r24	; 0x02
+	return(1);
+ 8f0:	81 e0       	ldi	r24, 0x01	; 1
+}
+ 8f2:	08 95       	ret
+
+000008f4 <cola_llena>:
+
+char cola_llena(volatile cola_control *cola_ctrl)
+{
+	if (cola_ctrl->cont_datos == cola_ctrl->max)
+ 8f4:	fc 01       	movw	r30, r24
+ 8f6:	22 81       	ldd	r18, Z+2	; 0x02
+ 8f8:	93 81       	ldd	r25, Z+3	; 0x03
+ 8fa:	81 e0       	ldi	r24, 0x01	; 1
+ 8fc:	29 13       	cpse	r18, r25
+ 8fe:	80 e0       	ldi	r24, 0x00	; 0
+	}		
+	else
+	{
+		return(0);	
+	}	
+}
+ 900:	08 95       	ret
+
+00000902 <cola_vacia>:
+
+char cola_vacia(volatile cola_control *cola_ctrl)
+{
+	if(!(cola_ctrl->cont_datos))
+ 902:	fc 01       	movw	r30, r24
+ 904:	92 81       	ldd	r25, Z+2	; 0x02
+ 906:	81 e0       	ldi	r24, 0x01	; 1
+ 908:	91 11       	cpse	r25, r1
+ 90a:	80 e0       	ldi	r24, 0x00	; 0
+	else
+	{
+		return(0);	
+	}
+	
+ 90c:	08 95       	ret
+
+0000090e <PW_init>:
+
+extern volatile to_tcc0_delays_control to_c0_ctrl;
+
+void PW_init(volatile PW_Control *PW_Ctrl,
+			char Sleep_mode)
+{
+ 90e:	dc 01       	movw	r26, r24
+	//Interrupciones tipo 0 habilitadas para el puerto B
+	PORTB.INTCTRL |= (3<<PORT_INT0LVL_gp);
+ 910:	e0 e2       	ldi	r30, 0x20	; 32
+ 912:	f6 e0       	ldi	r31, 0x06	; 6
+ 914:	91 85       	ldd	r25, Z+9	; 0x09
+ 916:	93 60       	ori	r25, 0x03	; 3
+ 918:	91 87       	std	Z+9, r25	; 0x09
+	PORTB.INT0MASK |= PW_PUSHBUTTON_bm;
+ 91a:	92 85       	ldd	r25, Z+10	; 0x0a
+ 91c:	94 60       	ori	r25, 0x04	; 4
+ 91e:	92 87       	std	Z+10, r25	; 0x0a
+	//Sense Rising edge
+	PORTB.PIN2CTRL |= 0b00000001;
+ 920:	92 89       	ldd	r25, Z+18	; 0x12
+ 922:	91 60       	ori	r25, 0x01	; 1
+ 924:	92 8b       	std	Z+18, r25	; 0x12
+		
+	//Indique estado en que quederá el dispositivo
+	PW_Ctrl->modo = PW_MODO_SLEEP;
+ 926:	81 e0       	ldi	r24, 0x01	; 1
+ 928:	8c 93       	st	X, r24
+	//Empiece en modo sleep;
+	//Configure el modo de ahorro de energía
+	SLEEP.CTRL |= Sleep_mode;	
+ 92a:	e8 e4       	ldi	r30, 0x48	; 72
+ 92c:	f0 e0       	ldi	r31, 0x00	; 0
+ 92e:	80 81       	ld	r24, Z
+ 930:	68 2b       	or	r22, r24
+ 932:	60 83       	st	Z, r22
+	//Habilite el sleep;
+	sleep_enable();
+ 934:	80 81       	ld	r24, Z
+ 936:	81 60       	ori	r24, 0x01	; 1
+ 938:	80 83       	st	Z, r24
+	//INTERRUPCIONES DEBEN ESTAR ENCENDIDAS
+	//vaya a modo sleep;
+	sleep_cpu();
+ 93a:	88 95       	sleep
+ 93c:	08 95       	ret
+
+0000093e <__vector_34>:
+}
+
+
+ISR(PORTB_INT0_vect)
+{
+ 93e:	1f 92       	push	r1
+ 940:	0f 92       	push	r0
+ 942:	0f b6       	in	r0, 0x3f	; 63
+ 944:	0f 92       	push	r0
+ 946:	11 24       	eor	r1, r1
+ 948:	2f 93       	push	r18
+ 94a:	3f 93       	push	r19
+ 94c:	4f 93       	push	r20
+ 94e:	5f 93       	push	r21
+ 950:	6f 93       	push	r22
+ 952:	7f 93       	push	r23
+ 954:	8f 93       	push	r24
+ 956:	9f 93       	push	r25
+ 958:	af 93       	push	r26
+ 95a:	bf 93       	push	r27
+ 95c:	ef 93       	push	r30
+ 95e:	ff 93       	push	r31
+	//Anti-rebote:
+	//Inhabilite las interrupciones del puerto
+	PORTB.INTCTRL &= ~(3<<PORT_INT0LVL_gp);
+ 960:	80 91 29 06 	lds	r24, 0x0629
+ 964:	8c 7f       	andi	r24, 0xFC	; 252
+ 966:	80 93 29 06 	sts	0x0629, r24
+	To_tcc0_InitTo(&to_c0_ctrl,0x1e,0x84,7);
+ 96a:	27 e0       	ldi	r18, 0x07	; 7
+ 96c:	44 e8       	ldi	r20, 0x84	; 132
+ 96e:	6e e1       	ldi	r22, 0x1E	; 30
+ 970:	86 e0       	ldi	r24, 0x06	; 6
+ 972:	90 e2       	ldi	r25, 0x20	; 32
+ 974:	0e 94 26 05 	call	0xa4c	; 0xa4c <To_tcc0_InitTo>
+	
+		
+	switch(PW_Ctrl.modo)
+ 978:	80 91 2d 20 	lds	r24, 0x202D
+ 97c:	81 30       	cpi	r24, 0x01	; 1
+ 97e:	79 f0       	breq	.+30     	; 0x99e <__vector_34+0x60>
+ 980:	82 30       	cpi	r24, 0x02	; 2
+ 982:	a9 f4       	brne	.+42     	; 0x9ae <__vector_34+0x70>
+			PW_Ctrl.modo = PW_MODO_ACTIVO;
+		break;
+		
+		//Debe detener Adquisiciones y dormir
+		case PW_MODO_ACTIVO:
+			wdt_enable(WDTO_15MS);
+ 984:	93 e0       	ldi	r25, 0x03	; 3
+ 986:	88 ed       	ldi	r24, 0xD8	; 216
+ 988:	08 b6       	in	r0, 0x38	; 56
+ 98a:	18 be       	out	0x38, r1	; 56
+ 98c:	84 bf       	out	0x34, r24	; 52
+ 98e:	90 93 80 00 	sts	0x0080, r25
+ 992:	80 91 82 00 	lds	r24, 0x0082
+ 996:	81 fd       	sbrc	r24, 1
+ 998:	fc cf       	rjmp	.-8      	; 0x992 <__vector_34+0x54>
+ 99a:	08 be       	out	0x38, r0	; 56
+		break;
+ 99c:	08 c0       	rjmp	.+16     	; 0x9ae <__vector_34+0x70>
+		
+	switch(PW_Ctrl.modo)
+	{
+		//Debe despertar
+		case PW_MODO_SLEEP:
+			sleep_disable();
+ 99e:	80 91 48 00 	lds	r24, 0x0048
+ 9a2:	8e 7f       	andi	r24, 0xFE	; 254
+ 9a4:	80 93 48 00 	sts	0x0048, r24
+			PW_Ctrl.modo = PW_MODO_ACTIVO;
+ 9a8:	82 e0       	ldi	r24, 0x02	; 2
+ 9aa:	80 93 2d 20 	sts	0x202D, r24
+		//Debe detener Adquisiciones y dormir
+		case PW_MODO_ACTIVO:
+			wdt_enable(WDTO_15MS);
+		break;
+	}
+ 9ae:	ff 91       	pop	r31
+ 9b0:	ef 91       	pop	r30
+ 9b2:	bf 91       	pop	r27
+ 9b4:	af 91       	pop	r26
+ 9b6:	9f 91       	pop	r25
+ 9b8:	8f 91       	pop	r24
+ 9ba:	7f 91       	pop	r23
+ 9bc:	6f 91       	pop	r22
+ 9be:	5f 91       	pop	r21
+ 9c0:	4f 91       	pop	r20
+ 9c2:	3f 91       	pop	r19
+ 9c4:	2f 91       	pop	r18
+ 9c6:	0f 90       	pop	r0
+ 9c8:	0f be       	out	0x3f, r0	; 63
+ 9ca:	0f 90       	pop	r0
+ 9cc:	1f 90       	pop	r1
+ 9ce:	18 95       	reti
+
+000009d0 <Init32MHz>:
+#include "FuncUtiles.h"
+
+//Habilita oscilador interno de 32MHz
+void Init32MHz()
+{
+	OSC.CTRL = OSC_RC32MEN_bm;       // enable 32MHz oscillator
+ 9d0:	82 e0       	ldi	r24, 0x02	; 2
+ 9d2:	80 93 50 00 	sts	0x0050, r24
+    while(!(OSC.STATUS & OSC_RC32MRDY_bm)); // wait for oscillator to be ready
+ 9d6:	80 91 51 00 	lds	r24, 0x0051
+ 9da:	81 ff       	sbrs	r24, 1
+ 9dc:	fc cf       	rjmp	.-8      	; 0x9d6 <Init32MHz+0x6>
+    CCP = CCP_IOREG_gc;              // disable register security for clock update
+ 9de:	88 ed       	ldi	r24, 0xD8	; 216
+ 9e0:	84 bf       	out	0x34, r24	; 52
+    CLK.CTRL = CLK_SCLKSEL_RC32M_gc; // switch to 32MHz clock
+ 9e2:	81 e0       	ldi	r24, 0x01	; 1
+ 9e4:	80 93 40 00 	sts	0x0040, r24
+	OSC.CTRL &=(~OSC_RC2MEN_bm); 
+ 9e8:	80 91 50 00 	lds	r24, 0x0050
+ 9ec:	8e 7f       	andi	r24, 0xFE	; 254
+ 9ee:	80 93 50 00 	sts	0x0050, r24
+ 9f2:	08 95       	ret
+
+000009f4 <HabiliteInt>:
+}
+
+//Habilita interrupciones del nivel seleccionado
+void HabiliteInt(char nivel)
+{
+	PMIC.CTRL |= nivel;
+ 9f4:	e0 ea       	ldi	r30, 0xA0	; 160
+ 9f6:	f0 e0       	ldi	r31, 0x00	; 0
+ 9f8:	92 81       	ldd	r25, Z+2	; 0x02
+ 9fa:	89 2b       	or	r24, r25
+ 9fc:	82 83       	std	Z+2, r24	; 0x02
+ 9fe:	08 95       	ret
+
+00000a00 <__vector_14>:
+#include <avr/interrupt.h>
+
+extern to_tcc0_delays_control to_c0_ctrl;
+
+ISR(TCC0_OVF_vect)
+{
+ a00:	1f 92       	push	r1
+ a02:	0f 92       	push	r0
+ a04:	0f b6       	in	r0, 0x3f	; 63
+ a06:	0f 92       	push	r0
+ a08:	11 24       	eor	r1, r1
+ a0a:	8f 93       	push	r24
+ a0c:	ef 93       	push	r30
+ a0e:	ff 93       	push	r31
+	TCC0.INTCTRLA &= ~(3); //deshabilite interrupciones de tcc0
+ a10:	e0 e0       	ldi	r30, 0x00	; 0
+ a12:	f8 e0       	ldi	r31, 0x08	; 8
+ a14:	86 81       	ldd	r24, Z+6	; 0x06
+ a16:	8c 7f       	andi	r24, 0xFC	; 252
+ a18:	86 83       	std	Z+6, r24	; 0x06
+	TCC0.CTRLA = 0; //detenga el timer
+ a1a:	10 82       	st	Z, r1
+	TCC0.CTRLFSET = (3 <<3); //reinicie el contador
+ a1c:	88 e1       	ldi	r24, 0x18	; 24
+ a1e:	81 87       	std	Z+9, r24	; 0x09
+	to_c0_ctrl.banderas = TO_TCC0_FIN_bm; //indique que hubo un fin de conteo
+ a20:	82 e0       	ldi	r24, 0x02	; 2
+ a22:	80 93 06 20 	sts	0x2006, r24
+
+	//Limpie bandera del puerto B para interrupciones del pulsador
+	PORTB.INTFLAGS |= 0x01;	
+ a26:	e0 e2       	ldi	r30, 0x20	; 32
+ a28:	f6 e0       	ldi	r31, 0x06	; 6
+ a2a:	84 85       	ldd	r24, Z+12	; 0x0c
+ a2c:	81 60       	ori	r24, 0x01	; 1
+ a2e:	84 87       	std	Z+12, r24	; 0x0c
+	//Habilite interrupciones del puerto B para el pulsador
+	PORTB.INTCTRL |= (3<<PORT_INT0LVL_gp);
+ a30:	81 85       	ldd	r24, Z+9	; 0x09
+ a32:	83 60       	ori	r24, 0x03	; 3
+ a34:	81 87       	std	Z+9, r24	; 0x09
+	
+}
+ a36:	ff 91       	pop	r31
+ a38:	ef 91       	pop	r30
+ a3a:	8f 91       	pop	r24
+ a3c:	0f 90       	pop	r0
+ a3e:	0f be       	out	0x3f, r0	; 63
+ a40:	0f 90       	pop	r0
+ a42:	1f 90       	pop	r1
+ a44:	18 95       	reti
+
+00000a46 <To_tcc0_Init>:
+
+void To_tcc0_Init(to_tcc0_delays_control *to_ctrl)
+{
+	to_ctrl->banderas = 0;
+ a46:	fc 01       	movw	r30, r24
+ a48:	10 82       	st	Z, r1
+ a4a:	08 95       	ret
+
+00000a4c <To_tcc0_InitTo>:
+
+void To_tcc0_InitTo(to_tcc0_delays_control *to_ctrl,
+					char perh,
+					char perl,
+					char presc)
+{
+ a4c:	fc 01       	movw	r30, r24
+	if (to_ctrl->banderas & TO_TCC0_ACTIVO_bm)
+ a4e:	80 81       	ld	r24, Z
+ a50:	80 ff       	sbrs	r24, 0
+ a52:	02 c0       	rjmp	.+4      	; 0xa58 <To_tcc0_InitTo+0xc>
+		to_ctrl->banderas |= TO_TCC0_OVR_bm; //Sobreescritura, sin reinicio
+ a54:	84 60       	ori	r24, 0x04	; 4
+ a56:	80 83       	st	Z, r24
+	
+	to_ctrl->banderas |= TO_TCC0_ACTIVO_bm;	
+	to_ctrl->banderas &= ~(TO_TCC0_FIN_bm);
+ a58:	90 81       	ld	r25, Z
+ a5a:	9d 7f       	andi	r25, 0xFD	; 253
+ a5c:	91 60       	ori	r25, 0x01	; 1
+ a5e:	90 83       	st	Z, r25
+	TCC0.CTRLFSET = (3 <<3); //reinicie el contador
+ a60:	88 e1       	ldi	r24, 0x18	; 24
+ a62:	80 93 09 08 	sts	0x0809, r24
+	TCC0.PERL = perl;
+ a66:	40 93 26 08 	sts	0x0826, r20
+	TCC0.PERH = perh;
+ a6a:	60 93 27 08 	sts	0x0827, r22
+	TCC0.INTCTRLA |= 3;
+ a6e:	80 91 06 08 	lds	r24, 0x0806
+ a72:	83 60       	ori	r24, 0x03	; 3
+ a74:	80 93 06 08 	sts	0x0806, r24
+	TCC0.CTRLA |= (presc & 0x0f); 
+ a78:	80 91 00 08 	lds	r24, 0x0800
+ a7c:	2f 70       	andi	r18, 0x0F	; 15
+ a7e:	28 2b       	or	r18, r24
+ a80:	20 93 00 08 	sts	0x0800, r18
+ a84:	08 95       	ret
+
+00000a86 <__vector_77>:
+#include <avr/interrupt.h>
+
+extern to_tcd0_delays_control to_d0_ctrl;
+
+ISR(TCD0_OVF_vect)
+{
+ a86:	1f 92       	push	r1
+ a88:	0f 92       	push	r0
+ a8a:	0f b6       	in	r0, 0x3f	; 63
+ a8c:	0f 92       	push	r0
+ a8e:	11 24       	eor	r1, r1
+ a90:	8f 93       	push	r24
+ a92:	ef 93       	push	r30
+ a94:	ff 93       	push	r31
+	TCD0.INTCTRLA &= ~(3); //deshabilite interrupciones de tcc0
+ a96:	e0 e0       	ldi	r30, 0x00	; 0
+ a98:	f9 e0       	ldi	r31, 0x09	; 9
+ a9a:	86 81       	ldd	r24, Z+6	; 0x06
+ a9c:	8c 7f       	andi	r24, 0xFC	; 252
+ a9e:	86 83       	std	Z+6, r24	; 0x06
+	TCD0.CTRLA = 0; //detenga el timer
+ aa0:	10 82       	st	Z, r1
+	TCD0.CTRLFSET = (3 <<3); //reinicie el contador
+ aa2:	88 e1       	ldi	r24, 0x18	; 24
+ aa4:	81 87       	std	Z+9, r24	; 0x09
+	to_d0_ctrl.banderas = TO_TCD0_FIN_bm; //indique que hubo un fin de conteo
+ aa6:	82 e0       	ldi	r24, 0x02	; 2
+ aa8:	80 93 07 20 	sts	0x2007, r24
+}
+ aac:	ff 91       	pop	r31
+ aae:	ef 91       	pop	r30
+ ab0:	8f 91       	pop	r24
+ ab2:	0f 90       	pop	r0
+ ab4:	0f be       	out	0x3f, r0	; 63
+ ab6:	0f 90       	pop	r0
+ ab8:	1f 90       	pop	r1
+ aba:	18 95       	reti
+
+00000abc <To_tcd0_Init>:
+
+void To_tcd0_Init(volatile to_tcd0_delays_control *to_d0_ctrl)
+{
+	to_d0_ctrl->banderas = 0;
+ abc:	fc 01       	movw	r30, r24
+ abe:	10 82       	st	Z, r1
+ ac0:	08 95       	ret
+
+00000ac2 <_exit>:
+ ac2:	f8 94       	cli
+
+00000ac4 <__stop_program>:
+ ac4:	ff cf       	rjmp	.-2      	; 0xac4 <__stop_program>

@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "2013-04 TransmisorEEG", "2013-04 TransmisorEEG\2013-04 TransmisorEEG.cproj", "{03909D78-0EC3-4ECC-8ACD-2A3760D6F365}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03909D78-0EC3-4ECC-8ACD-2A3760D6F365}.Debug|AVR.ActiveCfg = Debug|AVR
+		{03909D78-0EC3-4ECC-8ACD-2A3760D6F365}.Debug|AVR.Build.0 = Debug|AVR
+		{03909D78-0EC3-4ECC-8ACD-2A3760D6F365}.Release|AVR.ActiveCfg = Release|AVR
+		{03909D78-0EC3-4ECC-8ACD-2A3760D6F365}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
