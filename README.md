@@ -6,7 +6,7 @@ There are three projects:
 
 -"Blinking led Tarjeta:" This is the first project you should mount to the board, it makes the two LED flicker and that means everithing is well connected on the board.
 
--"Programa Final:" This program the board to transmit the data for the 8 channels, whit this configurations:
+-"Firmware_TransmisorEEG_BT:" This program the board to transmit the data for the 8 channels, whit this configurations:
 
 --CH1: Test Mode
 --CH2: Test Mode
